@@ -15,7 +15,7 @@ const SignIn = () => {
     <section className={styles.container}>
      <section className={styles.firstChild}>
        <div className={styles.bg}>
-         <img src="/churchLogo1.png" alt="" />
+         {/* <img src="/churchLogo1.png" alt="" /> */}
        </div>
        <h1>Welcome to Truevine Christian Centre</h1>
        <h2>Please, Sign in to continue...</h2>

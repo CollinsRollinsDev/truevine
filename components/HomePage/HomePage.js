@@ -10,7 +10,7 @@ const HomePage = () => {
         <Head>
           <style>
             @import
-            url('https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&display=swap');
+            url("https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&display=swap");
           </style>
       </Head>
       <Header />

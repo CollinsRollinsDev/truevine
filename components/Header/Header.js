@@ -56,7 +56,7 @@ const Header = () => {
         </div>
         <div className={styles.logoDiv}>
           <p>TVCC</p>
-          <img src="/churchLogo1.png" alt="" />
+          {/* <img src="/churchLogo1.png" alt="" /> */}
         </div>
         <div className={styles.profile}>
           <svg

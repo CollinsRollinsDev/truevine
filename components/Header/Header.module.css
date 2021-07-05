@@ -1,0 +1,138 @@
+.container {
+    width: 100%;
+    height: 90px;
+    background-color: transparent;
+    position: fixed;
+    z-index: 1;
+  }
+  .logoDiv {
+    height: 100%;
+    width: 10%;
+    cursor: pointer;
+  }
+  .logoDiv img {
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+  }
+  .menuContainer {
+    position: absolute;
+    width: 55%;
+    height: 100%;
+    /* background-color: blue; */
+    right: 0;
+    color: white;
+    text-shadow: 1px 1px 3px black;
+    top: 0;
+    padding: 2%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    font-weight: 900;
+  
+  }
+  .menuContainer li {
+    cursor: pointer;
+    background-color: transparent;
+    padding: 1% 2%;
+    border-radius: 10px;
+  }
+  .menuContainer li:hover {
+    color: white;
+    background-color: brown;
+  }
+  .desktop {
+    display: block;
+    padding: 2px 1%;
+  }
+  .mobile {
+    display: none;
+  }
+  .bgMenu{
+     height: 100vh;
+     width: 100%;
+     margin-top: 50px;
+     /* background-color: rgba(165, 42, 42, 0.782); */
+     display: none;
+  }
+  .menu{
+     position: fixed;
+     height: 60vh;
+     width: 55%;
+     background-color: rgba(165, 42, 42, 0.63);
+     padding: 0 2% 2%;
+     overflow-y: auto;
+  }
+  .menu div{
+     height: 50px;
+     width: 100%;
+     /* background-color: ; */
+     margin-top: 20px;
+     color: whitesmoke;
+     display: flex;
+     justify-content: flex-start;
+     align-items: center;
+     padding: 2%;
+     border-radius: 15px;
+     cursor: pointer;
+  }
+  .menu div:hover{
+     background-color: white;
+     color: brown;
+     font-weight: 700;
+  }
+  
+  @media screen and (max-width: 872px) {
+    .desktop {
+      display: none;
+    }
+    .bgMenu{
+      display: block;
+    }
+    .mobile {
+      display: flex;
+      height: 50px;
+      width: 100%;
+      /* background-color: red; */
+      position: fixed;
+      cursor: pointer;
+    }
+    .mobile .menuDiv {
+       height: 100%;
+       /* width: 10%; */
+       /* background-color: blue; */
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       fill: brown;
+       font-weight: 700;
+       flex: 1;
+    }
+    .mobile .logoDiv{
+       flex: 6;
+       height: 100%;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       /* background-color: purple; */
+       padding: 2%;
+       font-size: 23px;
+       font-family: sans-serif;
+       font-weight: 700;
+       color: whitesmoke;
+       column-gap: 10px;
+    }
+    .mobile .logoDiv img{
+       height: 90%;
+       width: 20%;
+    }
+    .mobile .profile{
+       flex: 1;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       fill: brown;
+    }
+  }
+  

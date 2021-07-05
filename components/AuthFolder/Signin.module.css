@@ -1,0 +1,181 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .container section {
+    background-color: rgb(213, 211, 211);
+    width: 100%;
+    height: 100%;
+  }
+  .firstChild{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     position: relative;
+  }
+  .bg{
+     position: absolute;
+     top: auto;
+     left: auto;
+     height: 50%;
+     width: 50%;
+     opacity: 0.3;
+     z-index: 0;
+  }
+  .bg img{
+     height: 100%;
+     width: 100%;
+  }
+  .firstChild h1{
+     margin-top: -20%;
+     font-size: 32px;
+     font-family: serif;
+     color: rgb(158, 28, 28);
+     position: relative;
+     z-index: 1;
+     text-align: center;
+  }
+  .firstChild h2{
+     font-size: 20px;
+     font-family: serif;
+     opacity: 0.9;
+     margin-top: 4%;
+     position: relative;
+     text-align: center;
+     z-index: 1;
+  }
+  .secondChild{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+  }
+  .secondChild form{
+     width: 70%;
+     height: fit-content;
+     background-color: whitesmoke;
+     border-radius: 20px;
+     box-shadow: 1px 1px 20px black;
+     display: flex;
+     justify-content: flex-start;
+     align-items: center;
+     flex-direction: column;
+     row-gap: 20px;
+     padding: 5% 0 2% 0;
+  }
+  .secondChild form input{
+     height: 50px;
+     width: 90%;
+     border-radius: 10px;
+     background-color:  rgb(213, 211, 211);
+     border-style: solid;
+     border-width: 2px;
+     border-color: rgb(179, 177, 177);
+     padding: 2%;
+     outline: none;
+  }
+  .secondChild form button{
+     height: 50px;
+     width: 90%;
+     border-radius: 10px;
+     background-color:  rgba(5, 2, 150, 0.686);
+     border-style: solid;
+     border-width: 1px;
+     border-color: rgba(5, 2, 150, 0.686);
+     padding: 2%;
+     cursor: pointer;
+     color: white;
+  }
+  .secondChild form button:hover{
+     background-color:  rgba(4, 2, 150, 0.563);
+     border-color: rgba(4, 2, 150, 0.563);
+  }
+  .secondChild form button:active{
+     opacity: 0.4;
+  }
+  .subcription{
+     height: 50px;
+     width: 90%;
+     padding: 2%;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     font-size: 11px;
+     font-weight: 700;
+     font-family: Arial, Helvetica, sans-serif;
+     cursor: pointer;
+  }
+  .skipping{
+     height: 50px;
+     width: 40%;
+     padding: 2%;
+     margin-left: 50%;
+     border-radius: 10px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: rgb(179, 177, 177);
+     cursor: pointer;
+     background-color: rgb(158, 28, 28);
+     color: rgb(216, 215, 215);
+  }
+  .skipping:hover{
+     background-color: rgb(123, 10, 10);
+     color: rgb(216, 215, 215);
+  }
+  
+  @media screen and (max-width: 872px) {
+     .container {
+        width: 100%;
+        height: 100vh;
+        display: block;
+        background-color: rgb(213, 211, 211);
+      }
+      .container section {
+        width: unset;
+        height: unset;
+      }
+      .firstChild{
+        width: 100%;
+        height: 40vh;
+        padding: 50px 0 0;
+     }
+     .bg{
+        display: none;
+     }
+     .firstChild h1{
+        margin-top: 0;
+        font-size: 22px;
+     }
+     .firstChild h2{
+        font-size: 16px;
+     }
+     .secondChild{
+        margin-top: 30px;
+        width: 100%;
+     }
+     .subcription{
+        height: 50px;
+        width: 90%;
+        padding: 2%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 11px;
+        font-weight: 700;
+        font-family: Arial, Helvetica, sans-serif;
+        cursor: pointer;
+     }
+     .skipping{
+        height: 40px;
+     } 
+     .secondChild form input{
+        height: 40px;
+     }
+     .secondChild form button{
+        height: 40px;
+     }
+  }

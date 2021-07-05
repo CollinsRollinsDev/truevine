@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import SignIn from '../components/AuthFolder/SignIn'
+// import SignIn from '../components/AuthFolder/SignIn'
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
       </Head>
       {/* <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} /> */}
     
-    <SignIn />
+    {/* <SignIn /> */}
     </div>
   )
 }

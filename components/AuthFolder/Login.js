@@ -2,7 +2,7 @@ import styles from "./SignIn.module.css";
 import { useState } from "react";
 import Link from 'next/link';
 
-const SignIn = () => {
+const Login = () => {
    const [email, setEmail] = useState('');
    const [password, setPassword] = useState('')
 
@@ -36,4 +36,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default Login;

@@ -6,11 +6,6 @@ const SignIn = () => {
    const [email, setEmail] = useState('');
    const [password, setPassword] = useState('')
 
-//  const css = {
-//    textDecoration: "none",
-//    color: "white"
-//  }
-
   return (
     <section className={styles.container}>
      <section className={styles.firstChild}>

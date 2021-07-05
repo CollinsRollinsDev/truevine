@@ -7,12 +7,12 @@ import Head from "next/head";
 const HomePage = () => {
   return (
     <section className={styles.container}>
-        <Head>
+        {/* <Head>
           <style>
             @import
             url("https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&display=swap");
           </style>
-      </Head>
+      </Head> */}
       <Header />
       <PreBody />
       <NextEvent />

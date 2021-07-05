@@ -26,7 +26,7 @@ const Header = () => {
     <section className={styles.container}>
       <div className={styles.desktop}>
         <div className={styles.logoDiv}>
-          <img src="/churchLogo1.png" alt="" />
+          {/* <img src="/churchLogo1.png" alt="" /> */}
         </div>
         <div className={styles.menuContainer}>
           <li>Home</li>

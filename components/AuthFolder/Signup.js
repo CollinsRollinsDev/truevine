@@ -1,4 +1,4 @@
-import styles from './Signup.module.css';
+// import styles from './Signup.module.css';
 import { useState } from "react";
 import Link from 'next/link';
 

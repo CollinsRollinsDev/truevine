@@ -9,11 +9,11 @@ const NextEvent = () => {
     const [days, setDays] = useState()
 
  // Function that get to countdown to specific date
- const countDownToLunch = async () => {
+ const UpcomingEventTimer = async () => {
   // Setting deadline date
-  let stoppageTime = new Date("March 10,2022 23:59:59").getTime();
+  let stoppageTime = new Date("Dec 10,2021 23:59:59").getTime();
 
-  // Using set interval to continuosly get the time after each one seconds
+  // Using set interval to continuously get the time after each one seconds
   let theTime = setInterval(() => {
     let dateNow = new Date().getTime();
     let remainingTime = stoppageTime - dateNow;
@@ -38,9 +38,8 @@ const NextEvent = () => {
 };
 
   useEffect(() => {
-    // upcomingEvents();
-    countDownToLunch();
-  }, [])
+    UpcomingEventTimer();
+  },[])
 
   return (
     <section className={styles.container}>
@@ -51,10 +50,10 @@ const NextEvent = () => {
         </style>
       </Head> */}
       <div className={styles.first}>
-        <p>Upcoming Event...</p>
-        <p className={styles.eventTheme}>
+        <div>Upcoming Event...</div>
+        <div className={styles.eventTheme}>
             Theme: <span>Too Hot To Be Hot!</span>
-        </p>
+        </div>
       </div>
       <div className={styles.second}>
           <div>

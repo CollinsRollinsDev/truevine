@@ -1,6 +1,7 @@
 import styles from './AuthRegister.module.css';
 import { useState } from "react";
 import Link from 'next/link';
+import Image from 'next/image';
 
 const AuthRegister = () => {
    const [email, setEmail] = useState('');
@@ -16,7 +17,8 @@ const AuthRegister = () => {
       <section className={styles.container}>
       <section className={styles.firstChild}>
         <div className={styles.bg}>
-          <img src="/churchLogo1.png" alt="" />
+          {/* <img src="/churchLogo1.png" alt="" /> */}
+      <Image src="/churchLogo1.png" alt="Church Logo" width='100%' height='100%' layout="responsive"/>
         </div>
         <h1>Welcome to Truevine Christian Centre</h1>
         <h2>Please, Sign up to be part of us...</h2>

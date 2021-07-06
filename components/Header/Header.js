@@ -1,6 +1,7 @@
 import styles from "./Header.module.css";
 import Link from "next/link";
 import { useState } from "react";
+import Image from 'next/image';
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
@@ -27,6 +28,8 @@ const Header = () => {
       <div className={styles.desktop}>
         <div className={styles.logoDiv}>
           {/* <img src="/churchLogo1.png" alt="" /> */}
+           <Image src="/churchLogo1.png" alt="Church Logo" width='100%' height='70%' layout="responsive"/>
+
         </div>
         <div className={styles.menuContainer}>
           <li>Home</li>
@@ -57,6 +60,10 @@ const Header = () => {
         <div className={styles.logoDiv}>
           <p>TVCC</p>
           {/* <img src="/churchLogo1.png" alt="" /> */}
+            <div className={styles.imgWrapper}>
+          <Image src="/churchLogo1.png" alt="Church Logo" width='90%' height='60%' layout="responsive"/>
+
+            </div>
         </div>
         <div className={styles.profile}>
           <svg

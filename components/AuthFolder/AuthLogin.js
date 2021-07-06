@@ -1,9 +1,9 @@
 import styles from './AuthLogin.module.css';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from 'next/link';
+import Image from 'next/image';
 
 const AuthLogin = () => {
-
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
 
@@ -11,7 +11,8 @@ const AuthLogin = () => {
         <section className={styles.container}>
      <section className={styles.firstChild}>
        <div className={styles.bg}>
-         <img src="/churchLogo1.png" alt="" />
+         {/* <img src="/churchLogo1.png" alt="" /> */}
+      <Image src="/churchLogo1.png" alt="Church Logo" width='100%' height='100%' layout="responsive"/>
        </div>
        <h1>Welcome to Truevine Christian Centre</h1>
        <h2>Please, Sign in to continue...</h2>

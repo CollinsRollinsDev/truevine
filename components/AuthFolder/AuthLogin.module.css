@@ -126,7 +126,14 @@
      background-color: rgb(123, 10, 10);
      color: rgb(216, 215, 215);
   }
-  
+  /* .imgTest{
+     opacity: 0.4;
+     height: 70px;
+     width: 70px;
+     background-color: red;
+  } */
+
+
   @media screen and (max-width: 872px) {
      .container {
         width: 100%;

@@ -1,13 +1,10 @@
-// import styles from "./SignIn.module.css";
+import styles from './AuthLogin.module.css';
 import { useState } from "react";
 import Link from 'next/link';
 
-const Login = () => {
-   const [email, setEmail] = useState('');
-   const [password, setPassword] = useState('')
-
-  return (
-    <section className={styles.container}>
+const AuthLogin = () => {
+    return (
+        <section className={styles.container}>
      <section className={styles.firstChild}>
        <div className={styles.bg}>
          {/* <img src="/churchLogo1.png" alt="" /> */}
@@ -24,16 +21,16 @@ const Login = () => {
           <p>Forgotten Password?</p>
           <p>Sign Up Here</p>
         </div>
-        <Link href="/">
+        {/* <Link href="/">
         <div className={styles.skipping}>
             Skip to website
         </div>
-        </Link>
+        </Link> */}
 
       </form>
      </section>
     </section>
-  );
-};
+    )
+}
 
-export default Login;
+export default AuthLogin

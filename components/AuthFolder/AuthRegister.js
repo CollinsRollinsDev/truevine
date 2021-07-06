@@ -8,7 +8,7 @@ const AuthRegister = () => {
    const [confirmPassword, setConfirmPassword] = useState('')
    const [firstName, setFirstNamed] = useState('')
    const [lastName, setlastName] = useState('')
-   const [phoneNumber, setPhoneNumber] = useState()
+   const [phoneNumber, setPhoneNumber] = useState('')
 
 
 

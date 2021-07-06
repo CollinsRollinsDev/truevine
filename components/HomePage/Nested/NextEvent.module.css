@@ -65,18 +65,18 @@
     height: 80px;
   }
   .first {
-    font-size: 16px;
+    font-size: 13px;
     font-family: "Lobster Two", cursive;
   }
   .eventTheme {
-    font-size: 17px;
+    font-size: 15px;
   }
 
   .second {
-    font-size: 16px;
+    font-size: 14px;
   }
   .second div span {
-    font-size: 25px;
+    font-size: 20px;
   }
   
 }

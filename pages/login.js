@@ -12,7 +12,7 @@ export default function Home() {
       </Head>
       {/* <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} /> */}
     
-    <Login />
+    {/* <Login /> */}
     </div>
   )
 }

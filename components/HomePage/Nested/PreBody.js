@@ -1,4 +1,5 @@
 import styles from "./PreBody.module.css";
+import Image from 'next/image';
 
 const PreBody = () => {
    return (

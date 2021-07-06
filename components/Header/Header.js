@@ -50,8 +50,8 @@ const Header = () => {
         </div>
       </div>
 
-      <div onClick={handleClick} className={styles.mobile}>
-        <div className={styles.menuDiv}>
+      <div  className={styles.mobile}>
+        <div onClick={handleClick} className={styles.menuDiv}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="22"

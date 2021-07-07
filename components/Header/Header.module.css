@@ -5,6 +5,13 @@
     position: fixed;
     z-index: 1;
   }
+  .container.active{
+    width: 100%;
+    height: 90px;
+    background-color: blue;
+    position: fixed;
+    z-index: 1;    
+  }
   .logoDiv {
     height: 50%;
     width: 10%;
@@ -85,6 +92,9 @@
   }
   
   @media screen and (max-width: 872px) {
+    .container{
+      height: 50px;
+    }
     .desktop {
       display: none;
     }
@@ -99,17 +109,20 @@
       position: fixed;
       cursor: pointer;
     }
-    .mobile .menuDiv {
+
+/* edited */
+
+    /* .mobile .menuDiv {
        height: 100%;
-       /* width: 10%; */
-       /* background-color: blue; */
        display: flex;
        justify-content: center;
        align-items: center;
        fill: brown;
        font-weight: 700;
        flex: 1;
-    }
+    } */
+
+
     .mobile .logoDiv{
        flex: 6;
        height: 100%;
@@ -137,12 +150,17 @@
       /* left: 2%; */
       /* background-color: orange; */
     }
-    .mobile .profile{
+
+
+    /* edited */
+
+
+    /* .mobile .profile{
        flex: 1;
        display: flex;
        justify-content: center;
        align-items: center;
        fill: brown;
-    }
+    } */
   }
   

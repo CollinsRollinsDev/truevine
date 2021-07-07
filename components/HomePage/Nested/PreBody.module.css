@@ -88,7 +88,7 @@
   
     .words {
      background-color: transparent;
-     padding: 0 0 0 0;
+     padding: 0 2% 0 2%;
      row-gap: unset;
 
    }
@@ -107,3 +107,4 @@
    }
   }
   
+

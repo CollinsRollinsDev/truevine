@@ -1,0 +1,115 @@
+.container{
+    /* height: 400px; */
+    height: fit-content;
+    width: 100%;
+    /* background-color: blue; */
+    padding: 2% 0;
+}
+.head{
+    text-align: center;
+    font-size: 35px;
+    color: black;
+    font-weight: 700;
+    font-family: "Lobster Two", cursive;
+    /* background-color: red; */
+    width: 100%;
+    padding: 2%;
+}
+.sermonsDiv{
+    /* background-color: orange; */
+    height: 350px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 2%;
+    column-gap: 20px;
+}
+.sermons{
+    background-color: white;
+    height: 280px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.sermons:hover{
+    opacity: 0.8;
+}
+.sermons .img{
+    flex: 3;
+    /* background-color: rgb(194, 12, 43); */
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.sermons .content{
+    flex: 1;
+    background-color: rgba(165, 42, 42, 0.76);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* color: white; */
+    padding: 1%;
+}
+.preacher{
+    flex: 1;
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* background-color: red; */
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: "Lobster Two", cursive; */
+}
+.preacher span{
+    font-weight: 700;
+    margin-left: 2%;
+    /* text-align: center; */
+}
+.message{
+    flex: 2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 16px;
+    width: 100%;
+    font-family: "Lobster Two", cursive;
+
+}
+.message span{
+    font-weight: 700;
+    margin-left: 2%;
+    /* text-align: center; */
+}
+
+/* Mobile View */
+
+@media screen and (max-width: 872px) {
+    .sermonsDiv{
+        /* background-color: orange; */
+        height: fit-content;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0 2%;
+        row-gap: 20px;
+    }
+    .sermons{
+        background-color: white;
+        height: 200px;
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+}

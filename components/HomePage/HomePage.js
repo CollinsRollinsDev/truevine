@@ -2,6 +2,7 @@ import styles from "./HomePage.module.css";
 import Header from "../Header/Header";
 import PreBody from "./Nested/PreBody";
 import NextEvent from "./Nested/NextEvent";
+import RecentSermons from "./Nested/RecentSermons";
 import Head from "next/head";
 
 const HomePage = () => {
@@ -16,6 +17,9 @@ const HomePage = () => {
       <Header />
       <PreBody />
       <NextEvent />
+      <RecentSermons />
+
+      
     </section>
   );
 };

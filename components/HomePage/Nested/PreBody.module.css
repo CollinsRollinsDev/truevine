@@ -1,7 +1,6 @@
 .container {
     width: 100%;
     height: 500px;
-    /* background-color: orange; */
     padding: 91px 0 0;
     background-image: url('/coverbg.jpg');
     background-size: cover;
@@ -12,6 +11,19 @@
     align-items: center;
     position: relative;
   }
+  /* .vidDiv{
+    background-color: blue;
+    width: 100%;
+    height: 500;
+    position: absolute;
+    top: -0.5px;
+  } */
+  /* .video{
+    min-width: 100vw;
+    height: 100%;
+    position: absolute;
+    top: -15px;
+  } */
   .overlay {
     position: absolute;
     top: 0;
@@ -51,7 +63,6 @@
   .buttonsDiv {
     height: 100px;
     width: 100%;
-    /* background-color: blue; */
     position: absolute;
     bottom: 0;
     padding: 2% 5%;

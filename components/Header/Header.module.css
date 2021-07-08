@@ -27,7 +27,6 @@
     position: absolute;
     width: 55%;
     height: 100%;
-    /* background-color: blue; */
     right: 0;
     color: white;
     text-shadow: 1px 1px 3px black;
@@ -61,7 +60,6 @@
      height: 100vh;
      width: 100%;
      margin-top: 60px;
-     /* background-color: rgba(165, 42, 42, 0.782); */
      display: none;
   }
   .menu{
@@ -75,7 +73,6 @@
   .menu div{
      height: 50px;
      width: 100%;
-     /* background-color: ; */
      margin-top: 20px;
      color: whitesmoke;
      display: flex;
@@ -105,23 +102,9 @@
       display: flex;
       height: 50px;
       width: 100%;
-      /* background-color: red; */
       position: fixed;
       cursor: pointer;
     }
-
-/* edited */
-
-    /* .mobile .menuDiv {
-       height: 100%;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       fill: brown;
-       font-weight: 700;
-       flex: 1;
-    } */
-
 
     .mobile .logoDiv{
        flex: 6;
@@ -130,7 +113,6 @@
        display: flex;
        justify-content: center;
        align-items: center;
-       /* background-color: purple; */
        padding: 2%;
        font-size: 23px;
        font-family: sans-serif;
@@ -145,22 +127,7 @@
     }
     .mobile .imgWrapper{
       height: 30px;
-      /* position: relative; */
       width: 40px;
-      /* left: 2%; */
-      /* background-color: orange; */
     }
-
-
-    /* edited */
-
-
-    /* .mobile .profile{
-       flex: 1;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       fill: brown;
-    } */
   }
   

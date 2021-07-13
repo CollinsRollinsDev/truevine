@@ -5,7 +5,7 @@ export const slider = [
         textFill: "Mount of Grace and Glory"
     },
     {
-        image:"/preImg2.jpg",
+        image:"/preImg3.jpg",
         alt:"True vine church images",
         textFill: "Where the Word defines us"
     },

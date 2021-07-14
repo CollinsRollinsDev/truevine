@@ -151,7 +151,7 @@ const PreBody = () => {
             {/* {index === current && <img src={slide.image} alt={slide.alt} />} */}
 
             {index === current && (
-              <Image src={slide.image} alt={slide.alt} layout="fill" priority />
+              <Image src={slide.image} alt={slide.alt} layout="fill" priority quality="60" />
             )}
             <div  className={index === current ? "ultrans activate" : "ultrans"}
                   style={

@@ -3,6 +3,7 @@ import Header from "../Header/Header";
 import PreBody from "./Nested/PreBody";
 import NextEvent from "./Nested/NextEvent";
 import RecentSermons from "./Nested/RecentSermons";
+import Statements from "./Nested/Statements";
 import Head from "next/head";
 
 const HomePage = () => {
@@ -18,7 +19,7 @@ const HomePage = () => {
       <PreBody />
       <NextEvent />
       <RecentSermons />
-
+      <Statements />
       
     </section>
   );

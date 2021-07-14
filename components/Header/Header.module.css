@@ -4,6 +4,7 @@
     background-color: transparent;
     position: fixed;
     z-index: 1;
+    
   }
   .container.active{
     width: 100%;
@@ -103,7 +104,14 @@
       height: 50px;
       width: 100%;
       position: fixed;
+  -webkit-tap-highlight-color: transparent;
       cursor: pointer;
+    }
+    .mobile svg:hover{
+      opacity: 0.8;
+    }
+    .mobile svg:active{
+      opacity: 0.2;
     }
 
     .mobile .logoDiv{

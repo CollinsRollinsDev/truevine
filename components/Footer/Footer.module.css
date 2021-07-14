@@ -83,6 +83,8 @@
   color: white;
   cursor: pointer;
   font-weight: 700;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
 }
 .knowMore:hover {
   background-color: rgb(168, 167, 167);

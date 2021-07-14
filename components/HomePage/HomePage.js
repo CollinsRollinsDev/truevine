@@ -6,6 +6,7 @@ import RecentSermons from "./Nested/RecentSermons";
 import Statements from "./Nested/Statements";
 import Head from "next/head";
 import LastLayer from "./Nested/LastLayer";
+import Footer from "../Footer/Footer";
 
 const HomePage = () => {
   return (
@@ -22,6 +23,7 @@ const HomePage = () => {
       <RecentSermons />
       <Statements />
       <LastLayer />
+      <Footer />
       
     </section>
   );

@@ -1,0 +1,226 @@
+.parentOverall{
+    height: 500px;
+    width: 100%;
+    background-color: rgb(43, 18, 18);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 30px;
+    padding: 0 2%;
+}
+
+.container{
+   flex: 10;
+   height: 100%;
+   width: 100%;
+   background-color: transparent;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   column-gap: 30px;
+   padding: 0 2%;
+}
+.credit{
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    color: rgb(177, 177, 177);
+}
+.container section{
+    height: 90%;
+    width: 100%;
+    /* background-color: orange; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.head{
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 0 0 5%;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    font-family: "Lobster Two", cursive;
+    font-size: 25px;
+    font-weight: 700;
+    color: white;
+}
+.aboutArea{
+    flex: 4;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0 5%;
+    height: 100%;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    color: rgb(185, 183, 183);
+    /* background-color: blue; */
+}
+.knowMore{
+    padding: 2%;
+    border-style: solid;
+    border-color: transparent;
+    border-radius: 20px;
+    width: 60%;
+    height: 40px;
+    background-color: brown;
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+}
+.knowMore:hover{
+    background-color: rgb(168, 167, 167);
+    color: brown;
+}
+.knowMore:active{
+    opacity: 0.2;
+}
+.quickLinksArea{
+    flex: 4;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0 5%;
+    height: 100%;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(185, 183, 183);
+    /* background-color: blue; */
+    list-style: none;
+    row-gap: 10px;
+}
+.quickLinksArea li{
+    margin-top: 5%;
+    cursor: pointer;
+}
+.quickLinksArea li:hover{
+    opacity: 0.7;
+}
+.quickLinksArea li:active{
+    opacity: 0.2;
+}
+
+.connectArea{
+    flex: 4;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 5%;
+    height: 100%;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(185, 183, 183);
+    /* background-color: blue; */
+    list-style: none;
+    column-gap: 30px;
+}
+.connectArea li{
+    cursor: pointer;
+    fill: rgb(185, 183, 183);
+}
+.connectArea li:hover{
+    opacity: 0.7;
+}
+.connectArea li:active{
+    opacity: 0.2;
+}
+
+@media screen and (max-width: 872px) {
+
+    .parentOverall{
+        min-height: 850px;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 0;
+    }
+    .head{
+        flex: unset;
+        display: flex;
+        justify-content: flex-start;
+        padding: 5% 0 5% 5%;
+        align-items: center;
+        height: fit-content;
+        width: 100%;
+        font-family: "Lobster Two", cursive;
+        font-size: 25px;
+        font-weight: 700;
+        color: white;
+    }
+    
+    .container{
+       width: 100%;
+       flex-direction: column;
+       align-items: center;
+    }
+    .credit{
+        font-size: 11px;
+    }
+    .head{
+        font-size: 19px;
+    }
+    .aboutArea{
+        font-size: 14px;
+    }
+    .knowMore{
+        width: 50%;
+        height: 30px;
+    }
+    
+.quickLinksArea{
+font-size: 13px;
+flex: unset;
+height: fit-content;
+}
+.quickLinksArea li{
+    margin-top: 0;
+}
+
+
+.connectArea{
+    flex: unset;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 5%;
+    height: fit-content;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(185, 183, 183);
+    /* background-color: blue; */
+    list-style: none;
+    column-gap: 30px;
+}
+.connectArea li{
+    cursor: pointer;
+    fill: rgb(185, 183, 183);
+}
+.connectArea li:hover{
+    opacity: 0.7;
+}
+.connectArea li:active{
+    opacity: 0.2;
+}
+}

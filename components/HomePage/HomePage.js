@@ -5,6 +5,7 @@ import NextEvent from "./Nested/NextEvent";
 import RecentSermons from "./Nested/RecentSermons";
 import Statements from "./Nested/Statements";
 import Head from "next/head";
+import LastLayer from "./Nested/LastLayer";
 
 const HomePage = () => {
   return (
@@ -20,6 +21,7 @@ const HomePage = () => {
       <NextEvent />
       <RecentSermons />
       <Statements />
+      <LastLayer />
       
     </section>
   );

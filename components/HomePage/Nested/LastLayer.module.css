@@ -1,0 +1,93 @@
+.container{
+    /* background-color: brown; */
+    height: 250px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    column-gap: 20px;
+    padding: 0 2%;
+}
+.container .subContainer{
+    height: 90%;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.first{
+    /* background-color: orange; */
+    flex: 1.6;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.firstText{
+    font-size: 25px;
+    font-family: "Lobster Two", cursive;
+    font-weight: 700;
+}
+.secondText{
+    font-size: 25px;
+    font-family: "Lobster Two", cursive;
+    font-weight: 700;
+    padding-left: 2%;
+}
+.first svg{
+    fill: brown;
+    width: 3.5rem;
+    height: 100%;
+}
+.second{
+    flex: 2.4;
+    width: 100%;
+    /* background-color: forestgreen; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    color: brown;
+}
+
+.container a {
+    color: blue;
+}
+
+  @media screen and (max-width: 872px) {
+    .container{
+        background-color: pink;
+        min-height: 700px;
+        flex-direction: column;
+        column-gap: unset;
+        row-gap: 30px;
+        padding: 0 2%;
+    }
+    .container .subContainer{
+        height: 90%;
+        width: 70%;
+    }
+    .firstText{
+        font-size: 19px;
+        font-family: "Lobster Two", cursive;
+        font-weight: 700;
+    }
+    .secondText{
+        font-size: 19px;
+        font-family: "Lobster Two", cursive;
+        font-weight: 700;
+        padding-left: 2%;
+    }
+    .first svg{
+        width: 2.5rem;
+    }
+    .second{
+        font-size: 14px;
+    }
+    
+  }

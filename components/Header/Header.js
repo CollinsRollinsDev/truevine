@@ -29,14 +29,16 @@ const Header = () => {
     <section className={styles.bgMenu}>
       <section className={styles.menu}>
         <div>Home</div>
+        <Link href="/sermon" passHref>
         <div>Sermon</div>
+        </Link>
         <div>Services</div>
         <div>About</div>
         <div>Contact</div>
-        <Link href="/login">
+        <Link href="/login" passHref>
           <div>Login</div>
         </Link>
-        <Link href="/signup">
+        <Link href="/signup" passHref>
           <div>Register</div>
         </Link>
       </section>
@@ -60,14 +62,16 @@ const Header = () => {
           </div>
           <div className={styles.menuContainer}>
             <li>Home</li>
-            <li>Sermons</li>
+            <Link href="/sermon" passHref>
+        <li>Sermon</li>
+        </Link>
             <li>Services</li>
             <li>About</li>
             <li>Contact</li>
-            <Link href="/login">
+            <Link href="/login" passHref>
               <li>Login</li>
             </Link>
-            <Link href="/signup">
+            <Link href="/signup" passHref>
               <li>Register</li>
             </Link>
           </div>

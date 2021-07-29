@@ -10,7 +10,7 @@ export const slider = [
         textFill: "Where the Word defines us"
     },
     {
-        image:"/preImg4.jpg",
+        image:"/choir.jpg",
         alt:"True vine church images",
         textFill: "Where Praise and Worship to God Is A Duty"
     },

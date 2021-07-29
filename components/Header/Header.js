@@ -53,7 +53,7 @@ const Header = () => {
             <Image
               src="/churchLogo1.png"
               alt="Church Logo"
-              width="100%"
+              width="70%"
               height="70%"
               layout="responsive"
             />
@@ -94,7 +94,7 @@ const Header = () => {
               <Image
                 src="/churchLogo1.png"
                 alt="Church Logo"
-                width="90%"
+                width="70%"
                 height="60%"
                 layout="responsive"
               />

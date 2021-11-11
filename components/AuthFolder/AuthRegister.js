@@ -75,7 +75,7 @@ const AuthRegister = () => {
             <p>Have an account?</p>
             <p>Sign In Here</p>
           </div>
-          <Link href="/">
+          <Link href="/" passHref>
             <div className={styles.skipping}>Skip to website</div>
           </Link>
         </form>

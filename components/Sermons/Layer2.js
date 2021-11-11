@@ -6,8 +6,8 @@ import {posts} from './posts';
 
 const Layer2 = () => {
 
-    const sermons = posts.map(post => (
-        <section className={styles.contain}>
+    const sermons = posts.map((post, index) => (
+        <section key={index} className={styles.contain}>
         <section className={styles.imgSpace}>
           <section className={styles.imgs}>
             <Image 
@@ -15,7 +15,7 @@ const Layer2 = () => {
                           alt="Dummy for now"
                           layout="fill"
                           quality={50}
-                          />
+                   />
           </section>
           <section className={styles.imgPreacher}>
               <div className={styles.preacherImg}>

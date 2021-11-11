@@ -44,7 +44,7 @@ const AuthLogin = () => {
             <p>Forgotten Password?</p>
             <p>Sign Up Here</p>
           </div>
-          <Link href="/">
+          <Link href="/" passHref>
             <div className={styles.skipping}>Skip to website</div>
           </Link>
         </form>

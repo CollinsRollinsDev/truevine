@@ -1,0 +1,248 @@
+.bigBox{
+    margin-top: 100px;
+    height: auto;
+    width: 100%;
+    /* background-color: red; */
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 20px;
+}
+.sidebar{
+    height: 100%;
+    width: 100%;
+    flex: 1.3;
+    background-color: coral;
+}
+.main{
+    height: auto;
+    width: 100%;
+    flex: 3.7;
+    /* background-color: green; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    row-gap: 40px;
+}
+.contain{
+    height: 300px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 2px 2px 5px black;
+    cursor: pointer;
+}
+.contain:active{
+    opacity: 0;
+}
+.imgSpace{
+    height: 100%;
+    width: 100%;
+    flex: 1;
+    /* background-color: gold; */
+    position: relative;
+    padding: 2% 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.textSpace{
+    height: 100%;
+    width: 100%;
+    flex: 2;
+    /* background-color: purple; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+.imgs{
+    /* background-color: violet; */
+    height: 100%;
+    width: 100%;
+    flex: 3.5;
+    position: relative;
+}
+.imgPreacher{
+    /* background-color: turquoise; */
+    height: 100%;
+    width: 100%;
+    flex: 1.5;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+.preacherImg{
+    height: 70px;
+    width: 70px;
+    border-radius: 100%;
+    position: relative;
+    background-color: white;
+    margin-top: -30px;
+    box-shadow: 2px 2px 5px black, -2px -2px 5px black;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    overflow: hidden;
+}
+.preacherName{
+    font-size: 17px;
+    font-weight: 700;
+    color: black;
+    /* text-shadow: 1px 1px 3px black; */
+}
+.textSpace .first{
+    flex: 4;
+    height: 100%;
+    width: 100%;
+    /* background-color: wheat; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 5px;
+}
+.dateSpace{
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    /* background-color: gold; */
+    padding: 1%;
+    font-weight: 700;
+    color: grey;
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.titleSpace{
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    /* background-color: darkblue; */
+    padding: 1%;
+    font-weight: 700;
+    color: black;
+    font-size: 18px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.tagSpace{
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    /* background-color: gold; */
+    padding: 1%;
+    font-weight: 700;
+    color: rgba(57, 57, 180, 0.877);
+    font-size: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.excerptSpace{
+    flex: 3;
+    height: 100%;
+    width: 100%;
+    /* background-color: darkblue; */
+    padding: 1%;
+    color: grey;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.textSpace .second{
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    /* background-color: cadetblue; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-style: solid;
+    border-color: rgb(197, 195, 195) transparent transparent;
+    border-width: 1px;
+}
+.readmore{
+    font-size: 15px;
+    font-weight: 700;
+    color: rgba(57, 57, 180, 0.877);
+    text-decoration: underline;
+    font-weight: 700;
+    cursor: pointer;
+}
+.comment{
+    padding: 2%;
+    border-radius: 5px;
+    background-color: rgba(57, 57, 180, 0.877);
+    color: white;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 872px){
+
+    .bigBox{
+        flex-direction: column;
+        row-gap: 20px;
+        column-gap: 0;
+    }
+    .sidebar{
+        height: auto;
+        flex: unset;
+        background-color: coral;
+    }
+    .main{
+        height: auto;
+        flex: unset;
+    }
+    .contain{
+        height: 200px;
+        width: 100%;
+    }
+    .preacherImg{
+        height: 50px;
+        width: 50px;
+    }
+    .preacherName{
+        font-size: 12px;
+        text-align: center;
+        font-weight: 700;
+    }
+    .dateSpace{
+        font-size: 9px;
+    }
+    .titleSpace{
+        font-size: 13px;
+    }
+    .tagSpace{
+        font-size: 9px;
+    }
+    .excerptSpace{
+        font-size: 10px;
+    }
+    .readmore{
+        font-size: 12px;
+    }
+    .comment{
+        font-size: 12px;
+    }
+    .textSpace .second{
+        border: none;
+    }
+    .imgs{
+        flex: 2.5;
+    }
+    
+}

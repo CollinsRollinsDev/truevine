@@ -29,7 +29,7 @@ const RecentPosts = ({categories, slug}) => {
 
     console.log("related posts are: ",relatedPosts)
 
-    const postsMapped = relatedPosts.map(post => (
+    const postsMapped = relatedPosts.reverse().map(post => (
         <section  data-aos="fade-up" key={post.slug} className={styles.mappedReturned}>
         <div className={styles.imgSide}>
           <Image

@@ -9,7 +9,7 @@ const RecentSermons = ({posts}) => {
     AOS.init({ duration: 1500 });
   }, []);
 
-  const mappedSermons = posts.map((post) => (
+  const mappedSermons = posts.reverse().map((post) => (
     <div key={post.slug} className={styles.sermons}>
     <div className={styles.img}>
       <Image src={post.featuredImage.url} alt="Dummy for now" layout="fill" quality={50} />

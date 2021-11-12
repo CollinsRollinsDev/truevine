@@ -35,7 +35,9 @@ const Header = () => {
   const menuDisplay = (
     <section className={styles.bgMenu}>
       <section className={styles.menu}>
-        <div>Home</div>
+      <Link href="/" passHref>
+          <div>Home</div>
+        </Link>
         <Link href="/sermon" passHref>
         <div>Sermon</div>
         </Link>
@@ -69,7 +71,9 @@ const Header = () => {
             />
           </div>
           <div className={styles.menuContainer}>
-            <li>Home</li>
+          <Link href="/" passHref>
+        <li>Home</li>
+        </Link>
             <Link href="/sermon" passHref>
         <li>Sermon</li>
         </Link>

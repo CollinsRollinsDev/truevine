@@ -209,7 +209,6 @@
     .sidebar{
         height: auto;
         flex: unset;
-        background-color: coral;
     }
     .main{
         height: auto;

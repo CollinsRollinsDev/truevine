@@ -1,5 +1,5 @@
 .bigBox{
-    margin-top: 100px;
+    margin-top: -200px;
     height: auto;
     width: 100%;
     /* background-color: red; */
@@ -8,6 +8,7 @@
     align-items: center;
     justify-content: flex-start;
     column-gap: 20px;
+    position: relative;
 }
 .sidebar{
     height: 100%;
@@ -197,6 +198,7 @@
         flex-direction: column;
         row-gap: 20px;
         column-gap: 0;
+        margin-top: 0;
     }
     .sidebar{
         height: auto;

@@ -2,6 +2,8 @@ import styles from './Sermon.module.css';
 import Header from '../Header/Header';
 import React from 'react';
 import Layer1 from './Layer1';
+import Footer from '../Footer/Footer';
+import Layer2 from './Layer2';
 
 const Sermon = () => {
     return (
@@ -11,10 +13,9 @@ const Sermon = () => {
        {/* </div> */}
         <section className={styles.container}>
             <Layer1 />
-            {/* <div>
-                <a href="hsjsssss"><img src="https://whatever.com/text="jacgdjcac" alt="jmcjgj" /></a>
-            </div> */}
         </section>
+        <Layer2 />
+        <Footer />
        </>
     )
 }

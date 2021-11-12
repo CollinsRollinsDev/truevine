@@ -15,8 +15,6 @@ const Layer1 = () => {
                     <option value="oldest">Sort by Oldest</option>
                 </select>
             </section>
-
-            <Layer2 />
         </section>
     )
 }

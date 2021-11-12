@@ -5,7 +5,7 @@ import Layer1 from './Layer1';
 import Footer from '../Footer/Footer';
 import Layer2 from './Layer2';
 
-const Sermon = () => {
+const Sermon = ({posts}) => {
     return (
        <>
        {/* <div className={styles.headerBack}> */}
@@ -14,7 +14,7 @@ const Sermon = () => {
         <section className={styles.container}>
             <Layer1 />
         </section>
-        <Layer2 />
+        <Layer2 posts={posts}/>
         <Footer />
        </>
     )

@@ -1,17 +1,17 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import styles from "./Layer2.module.css";
 import Image from "next/image";
-import {posts} from './posts';
 
+const Layer2 = ({posts}) => {
 
-const Layer2 = () => {
+  console.log(posts);
 
     const sermons = posts.map((post, index) => (
         <section key={index} className={styles.contain}>
         <section className={styles.imgSpace}>
           <section className={styles.imgs}>
             <Image 
-                          src={post.image}
+                          src={post.node.featuredImage.url}
                           alt="Dummy for now"
                           layout="fill"
                           quality={50}
@@ -19,27 +19,29 @@ const Layer2 = () => {
           </section>
           <section className={styles.imgPreacher}>
               <div className={styles.preacherImg}>
-              <Image 
+              {/* <Image 
                           src={post.profileImage}
                           alt="Dummy for now"
                           layout="fill"
                           quality={50}
-                          />
+                          /> */}
               </div>
               <div className={styles.preacherName}>
-                  Preacher - {post.preacher}
+                  Preacher - {post.node.author.name}
               </div>
           </section>
         </section>
         <section className={styles.textSpace}>
           <section className={styles.first}>
-            <div className={styles.dateSpace}>{post.date}</div>
+            {/* <div className={styles.dateSpace}>{post.date}</div> */}
+            <div className={styles.dateSpace}>Monday 25th October, 2021</div>
             <div className={styles.titleSpace}>
-              {post.title}
+              {post.node.title}
             </div>
-            <div className={styles.tagSpace}>{post.tag}</div>
+            {/* <div className={styles.tagSpace}>{post.tag}</div> */}
+            <div className={styles.tagSpace}>faith / wealth / word / business</div>
             <div className={styles.excerptSpace}>
-           {post.excerpt}
+           {post.node.excerpt}
             </div>
           </section>
           <section className={styles.second}>
@@ -67,3 +69,6 @@ const Layer2 = () => {
 };
 
 export default Layer2;
+
+
+

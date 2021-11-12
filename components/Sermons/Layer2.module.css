@@ -38,7 +38,7 @@
     cursor: pointer;
 }
 .contain:active{
-    opacity: 0;
+    opacity: 0.5;
 }
 .imgSpace{
     height: 100%;

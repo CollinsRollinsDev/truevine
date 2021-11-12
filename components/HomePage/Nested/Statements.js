@@ -1,10 +1,17 @@
 import styles from "./Statements.module.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import react, {useState, useEffect} from 'react'
 
 const Statements = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1500 });
+  }, []);
+
   return (
     <>
-      <div className={styles.head}>Statements</div>
-      <section className={styles.container}>
+      <div data-aos="fade-left" className={styles.head}>Statements</div>
+      <section data-aos="zoom-in" className={styles.container}>
         <div className={styles.div}>
           <section className={styles.pictureArea}>
             <div>

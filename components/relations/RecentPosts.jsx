@@ -4,8 +4,14 @@ import Image from "next/image";
 import moment from "moment";
 import { getRecentPosts } from "../ApiRequests/getSermonPageBlogs";
 import { getSimilarPosts } from "../ApiRequests/getSermonPageBlogs";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const RecentPosts = ({categories, slug}) => {
+
+  useEffect(() => {
+    AOS.init({ duration: 1500 });
+  }, []);
 
     const [relatedPosts, setRelatedPosts] = useState([]);
 
@@ -24,7 +30,7 @@ const RecentPosts = ({categories, slug}) => {
     console.log("related posts are: ",relatedPosts)
 
     const postsMapped = relatedPosts.map(post => (
-        <section key={post.slug} className={styles.mappedReturned}>
+        <section  data-aos="fade-up" key={post.slug} className={styles.mappedReturned}>
         <div className={styles.imgSide}>
           <Image
             src={post.featuredImage.url}
@@ -59,7 +65,7 @@ const RecentPosts = ({categories, slug}) => {
     ))
 
   return (
-    <section className={styles.recentBox}>
+    <section  data-aos="zoom-in" className={styles.recentBox}>
       <h1>Recent Posts</h1>
       <section className={styles.mapped}>
        {postsMapped}

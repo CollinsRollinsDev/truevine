@@ -1,11 +1,20 @@
 import styles from "./Footer.module.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import react, {useState, useEffect} from 'react'
 
 const Footer = () => {
+
+  useEffect(() => {
+    AOS.init({ duration: 500 });
+  }, []);
+
+
   return (
     <>
       <section className={styles.parentOverall}>
         <section className={styles.container}>
-          <section>
+          <section >
             <div className={styles.head}>About</div>
             <div className={styles.aboutArea}>
               <p>

@@ -1,9 +1,17 @@
 import styles from "./LastLayer.module.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import react, {useState, useEffect} from 'react'
 
 const LastLayer = () => {
+
+  useEffect(() => {
+    AOS.init({ duration: 1500 });
+  }, []);
+
   return (
     <>
-      <section className={styles.container}>
+      <section data-aos="zoom-in" className={styles.container}>
         <div className={styles.subContainer}>
           <div className={styles.first}>
             <svg

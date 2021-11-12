@@ -1,8 +1,14 @@
 import styles from "./NextEvent.module.css";
 import Head from "next/head";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import {  useState, useEffect } from 'react';
 
 const NextEvent = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1500 });
+  }, []);
+
     const [seconds, setSeconds] = useState();
     const [minutes, setMinutes] = useState();
     const [hours, setHours] = useState();
@@ -42,7 +48,7 @@ const NextEvent = () => {
   },[])
 
   return (
-    <section className={styles.container}>
+    <section data-aos="fade-up" className={styles.container}>
       {/* <Head>
         <style>
           @import

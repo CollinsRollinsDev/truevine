@@ -1,10 +1,18 @@
 import styles from "./RecentSermons.module.css";
 import Image from "next/image";
+import react, {useState, useEffect} from 'react'
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const RecentSermons = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1500 });
+  }, []);
+
+
   return (
-    <section className={styles.container}>
-      <div className={styles.head}>Recent Sermons</div>
+    <section data-aos="zoom-in" className={styles.container}>
+      <div data-aos="fade-right" className={styles.head}>Recent Sermons</div>
       <div className={styles.sermonsDiv}>
         <div className={styles.sermons}>
           <div className={styles.img}>

@@ -2,8 +2,15 @@ import styles from "./Header.module.css";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Header = () => {
+
+  useEffect(() => {
+    AOS.init({ duration: 1500 });
+  }, []);
+
   // States
   const [toggle, setToggle] = useState(false);
   const [navBar, setNavBar] = useState(false);
@@ -48,7 +55,8 @@ const Header = () => {
   // return function for next
   return (
     <>
-      <section className={navBar ? "container active" : "container"}>
+      <section data-aos="zoom-in"
+          data-aos-delay="600" className={navBar ? "container active" : "container"}>
         <div className={styles.desktop}>
           <div className={styles.logoDiv}>
             {/* <img src="/churchLogo1.png" alt="" /> */}

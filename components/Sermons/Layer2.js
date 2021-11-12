@@ -4,13 +4,19 @@ import Image from "next/image";
 import RecentPosts from "../relations/RecentPosts";
 import moment from "moment";
 import Categories from "../relations/Categories";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Layer2 = ({posts}) => {
+
+  useEffect(() => {
+    AOS.init({ duration: 1500 });
+  }, []); 
 
   console.log(posts);
 
     const sermons = posts.map((post, index) => (
-        <section key={index} className={styles.contain}>
+        <section data-aos="fade-up" key={index} className={styles.contain}>
         <section className={styles.imgSpace}>
           <section className={styles.imgs}>
             <Image 

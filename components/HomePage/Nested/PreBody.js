@@ -1,9 +1,16 @@
 import styles from "./PreBody.module.css";
 import Image from "next/image";
 import { slider } from "./ImageSlider";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { useState, useEffect, useMemo, useCallback, useRef } from "react";
 
 const PreBody = () => {
+
+  useEffect(() => {
+    AOS.init({ duration: 1500 });
+  }, []);
+
   let [wordFill, setWordFill] = useState()
   const [current, setCurrent] = useState(0);
   const length = slider.length;
@@ -43,7 +50,7 @@ const PreBody = () => {
   return (
     <>
       {/* Overall Parent Container */}
-      <section className={styles.container}>
+      <section data-aos="fade-down" className={styles.container}>
         <div className={styles.overlay}>
         {slider.map((slide, index) => {
         return (

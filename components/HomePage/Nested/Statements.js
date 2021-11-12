@@ -10,7 +10,7 @@ const Statements = () => {
 
   return (
     <>
-      <div data-aos="fade-left" className={styles.head}>Statements</div>
+      <div data-aos="fade-right" className={styles.head}>Statements</div>
       <section data-aos="zoom-in" className={styles.container}>
         <div className={styles.div}>
           <section className={styles.pictureArea}>

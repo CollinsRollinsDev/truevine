@@ -11,7 +11,7 @@ const RecentSermons = () => {
 
 
   return (
-    <section data-aos="zoom-in" className={styles.container}>
+    <section data-aos="fade-up" className={styles.container}>
       <div data-aos="fade-right" className={styles.head}>Recent Sermons</div>
       <div className={styles.sermonsDiv}>
         <div className={styles.sermons}>

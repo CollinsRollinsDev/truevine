@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import styles from "./Layer2.module.css";
 import Image from "next/image";
 import RecentPosts from "../relations/RecentPosts";
+import moment from "moment";
 
 const Layer2 = ({posts}) => {
 
@@ -35,7 +36,7 @@ const Layer2 = ({posts}) => {
         <section className={styles.textSpace}>
           <section className={styles.first}>
             {/* <div className={styles.dateSpace}>{post.date}</div> */}
-            <div className={styles.dateSpace}>Monday 25th October, 2021</div>
+            <div className={styles.dateSpace}>{moment(post.node.createdAt).format('MMM DD YYYY')}</div>
             <div className={styles.titleSpace}>
               {post.node.title}
             </div>

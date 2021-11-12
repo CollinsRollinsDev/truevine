@@ -3,6 +3,7 @@ import styles from "./Layer2.module.css";
 import Image from "next/image";
 import RecentPosts from "../relations/RecentPosts";
 import moment from "moment";
+import Categories from "../relations/Categories";
 
 const Layer2 = ({posts}) => {
 
@@ -65,6 +66,7 @@ const Layer2 = ({posts}) => {
       </section>
       <section className={styles.sidebar}>
         <RecentPosts />
+        <Categories />
       </section>
     </section>
   );

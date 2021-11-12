@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import styles from "./Layer2.module.css";
 import Image from "next/image";
+import RecentPosts from "../relations/RecentPosts";
 
 const Layer2 = ({posts}) => {
 
@@ -59,11 +60,11 @@ const Layer2 = ({posts}) => {
   return (
     <section className={styles.bigBox}>
       <section className={styles.main}>
-      
         {sermons}
-
       </section>
-      <section className={styles.sidebar}></section>
+      <section className={styles.sidebar}>
+        <RecentPosts />
+      </section>
     </section>
   );
 };

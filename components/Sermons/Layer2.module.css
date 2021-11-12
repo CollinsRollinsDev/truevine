@@ -97,6 +97,7 @@
     font-weight: 700;
     color: black;
     /* text-shadow: 1px 1px 3px black; */
+    text-align: center;
 }
 .textSpace .first{
     flex: 4;

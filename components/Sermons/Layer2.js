@@ -19,12 +19,12 @@ const Layer2 = ({posts}) => {
           </section>
           <section className={styles.imgPreacher}>
               <div className={styles.preacherImg}>
-              {/* <Image 
-                          src={post.profileImage}
+              <Image 
+                          src={post.node.author.photo.url}
                           alt="Dummy for now"
                           layout="fill"
                           quality={50}
-                          /> */}
+                          />
               </div>
               <div className={styles.preacherName}>
                   Preacher - {post.node.author.name}

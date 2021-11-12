@@ -8,7 +8,7 @@ import Head from "next/head";
 import LastLayer from "./Nested/LastLayer";
 import Footer from "../Footer/Footer";
 
-const HomePage = () => {
+const HomePage = ({posts}) => {
   return (
     <section className={styles.container}>
         {/* <Head>
@@ -20,7 +20,7 @@ const HomePage = () => {
       <Header />
       <PreBody />
       <NextEvent />
-      <RecentSermons />
+      <RecentSermons posts={posts} />
       <Statements />
       <LastLayer />
       <Footer />

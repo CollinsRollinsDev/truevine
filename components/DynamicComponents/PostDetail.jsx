@@ -4,8 +4,15 @@ import RecentPosts from '../relations/RecentPosts';
 import Categories from '../relations/Categories';
 import Image from 'next/image'
 import moment from 'moment';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const PostDetail = ({post}) => {
+
+  useEffect(() => {
+    AOS.init({ duration: 1500 });
+  }, []);
+
 
     const getContentFragment = (index, text, obj, type) => {
         let modifiedText = text;
@@ -49,9 +56,9 @@ const PostDetail = ({post}) => {
     console.log("individula post is :", post)
 
     return (
-        <section className={styles.container}>
+        <section  data-aos="zoom-in" className={styles.container}>
             <section className={styles.main}>
-                <div className={styles.image}>
+                <div data-aos="fade-up" className={styles.image}>
                 <Image 
                           src={post.featuredImage.url}
                           alt="Dummy for now"
@@ -59,7 +66,7 @@ const PostDetail = ({post}) => {
                           quality={50}
                     />
                 </div>
-                <div className={styles.title}>
+                <div data-aos="fade-up" className={styles.title}>
                     <div className={styles.titleText}>{post.title}</div>
                     <div className={styles.secondary}>
                         <div className={styles.left}>
@@ -77,7 +84,7 @@ const PostDetail = ({post}) => {
                     </div>
                 </div>
 
-                <section className={styles.mainContent}>
+                <section data-aos="fade-up" className={styles.mainContent}>
                     {post.content.raw.children.map((typeObj, index) => {
                         const children = typeObj.children.map((item, itemIndex) => getContentFragment(itemIndex,item.text, item))
                         return getContentFragment(index, children, typeObj, typeObj.type)

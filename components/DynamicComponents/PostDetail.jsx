@@ -58,6 +58,7 @@ const PostDetail = ({post}) => {
     console.log("individula post is :", post)
 
     return (
+      <>
         <section  data-aos="zoom-in" className={styles.container}>
             <section className={styles.main}>
                 <div data-aos="fade-up" className={styles.image}>
@@ -99,8 +100,10 @@ const PostDetail = ({post}) => {
                 <RecentPosts />
                 <Categories />
             </section>
-            <Footer />
         </section>
+            <Footer />
+
+        </>
     )
 }
 

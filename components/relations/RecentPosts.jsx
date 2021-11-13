@@ -6,6 +6,7 @@ import { getRecentPosts } from "../ApiRequests/getSermonPageBlogs";
 import { getSimilarPosts } from "../ApiRequests/getSermonPageBlogs";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Link from 'next/link'
 
 const RecentPosts = ({categories, slug}) => {
 
@@ -30,8 +31,9 @@ const RecentPosts = ({categories, slug}) => {
     console.log("related posts are: ",relatedPosts)
 
     const postsMapped = relatedPosts.reverse().map(post => (
-        <section  data-aos="fade-up" key={post.slug} className={styles.mappedReturned}>
-        <div className={styles.imgSide}>
+          <Link key={post.slug} href={`/sermons/${post.slug}`} passHref>
+        <section  data-aos="fade-up" className={styles.mappedReturned}>
+          <div className={styles.imgSide}>
           <Image
             src={post.featuredImage.url}
             alt="Dummy for now"
@@ -62,6 +64,7 @@ const RecentPosts = ({categories, slug}) => {
           </div>
         </div>
       </section>
+          </Link>
     ))
 
   return (

@@ -60,7 +60,7 @@ const PostDetail = ({post}) => {
                     />
                 </div>
                 <div className={styles.title}>
-                    <div className={styles.titleText}>The man of Freedom</div>
+                    <div className={styles.titleText}>{post.title}</div>
                     <div className={styles.secondary}>
                         <div className={styles.left}>
                         <svg

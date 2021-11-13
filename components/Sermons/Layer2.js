@@ -6,6 +6,7 @@ import moment from "moment";
 import Categories from "../relations/Categories";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Link from 'next/link';
 
 const Layer2 = ({posts}) => {
 
@@ -16,7 +17,8 @@ const Layer2 = ({posts}) => {
   console.log(posts);
 
     const sermons = posts.map((post, index) => (
-        <section data-aos="fade-up" key={index} className={styles.contain}>
+       <Link href={`/sermons/${post.node.slug}`} passHref >
+          <section data-aos="fade-up" key={index} className={styles.contain}>
         <section className={styles.imgSpace}>
           <section className={styles.imgs}>
             <Image 
@@ -63,6 +65,7 @@ const Layer2 = ({posts}) => {
           </section>
         </section>
       </section>
+       </Link>
     ))
 
   return (

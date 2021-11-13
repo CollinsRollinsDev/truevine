@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from './CommentForm.module.css';
+import {submitComment} from '../ApiRequests/getSermonPageBlogs'
 
 
 const CommentForm = () => {
@@ -36,7 +37,7 @@ const CommentForm = () => {
 
   const handlePostSubmission = () => {
     setError(false);
-    const { name, email, comment, storeData } = formData;
+    const { name, email, comment, storeData, slug } = formData;
     if (!name || !email || !comment) {
       setError(true);
       return;
@@ -49,11 +50,11 @@ const CommentForm = () => {
     };
 
     if (storeData) {
-      localStorage.setItem('name', name);
-      localStorage.setItem('email', email);
+      window.localStorage.setItem('name', name);
+      window.localStorage.setItem('email', email);
     } else {
-      localStorage.removeItem('name');
-      localStorage.removeItem('email');
+      window.localStorage.removeItem('name');
+      window.localStorage.removeItem('email');
     }
 
     submitComment(commentObj)
@@ -76,12 +77,10 @@ const CommentForm = () => {
       });
   };
 
-
     return (
         <section className={styles.container}>
-            
             <h3 className={styles.headingComment}>Leave a Reply</h3>
-      <div className="grid grid-cols-1 gap-4 mb-4">
+      <div className={styles.textareaDiv}>
         <textarea value={formData.comment} onChange={onInputChange} className={styles.textarea} name="comment" placeholder="Comment" />
       </div>
       <div className={styles.inputDiv}>

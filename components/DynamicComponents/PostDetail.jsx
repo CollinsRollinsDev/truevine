@@ -7,6 +7,7 @@ import moment from 'moment';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import CommentForm from '../relations/CommentForm';
+import Footer from '../Footer/Footer';
 
 const PostDetail = ({post}) => {
 
@@ -91,13 +92,14 @@ const PostDetail = ({post}) => {
                         return getContentFragment(index, children, typeObj, typeObj.type)
                     })}
                 </section>
-                <CommentForm />
+                {/* <CommentForm /> */}
              </section>
 
              <section className={styles.sidebar}>
                 <RecentPosts />
                 <Categories />
             </section>
+            <Footer />
         </section>
     )
 }

@@ -7,12 +7,14 @@ const CommentForm = ({slug}) => {
     const [error, setError] = useState(false)
     const [localStorage, setLocalStorage] = useState(null);
     const [showSuccessMessage, setSuccessMessage] = useState(false)
+    const [loading, setLoading] = useState("Post Comment")
     // const [formData, setFormData] = useState({ name: null, email: null, comment: null, storeData: false });
     const commentEl = useRef();
     const nameEl = useRef();
     const emailEl = useRef();
-    const storeDataEl = useRef();
+    const storeDataEl = useRef()
 
+    const [feedback, setFeedback] = useState()
 
     const onInputChange = () => {
 
@@ -25,6 +27,7 @@ const CommentForm = ({slug}) => {
 
     const handleCommentSubmission = () => {
       setError(false);
+      setLoading(loading = "Posting Comment. Please Wait");
 
       const {value: comment} = commentEl.current
       const {value: name} = nameEl.current
@@ -49,11 +52,27 @@ const CommentForm = ({slug}) => {
       }
 
       submitComment(commentObj).then((res) => {
-        setSuccessMessage(true);
-        setTimeout(() => {
-          setSuccessMessage(false)
-        }, 3000);
+        setLoading("Posting Comment. Please Wait");
+        if(res.status === "success"){
+          setFeedback(res.message)
+          setSuccessMessage(true);
+          setLoading("Comment Successfully Posted!")
+          setTimeout(() => {
+            setSuccessMessage(false)
+            setLoading("Post Comment");
+          }, 3000);
+        } else{
+          setFeedback("Something went wrong. Try again later.")
+          setSuccessMessage(true);
+          setLoading("Oops! Error posting comment.")
+          setTimeout(() => {
+            setSuccessMessage(false)
+            setLoading("Post Comment");
+          }, 3000);
+        }
+       
       })
+      setLoading("Post comment");
 
     }
 
@@ -110,9 +129,9 @@ const CommentForm = ({slug}) => {
         onClick={handleCommentSubmission} 
         className={styles.postComment}
         >
-          Post Comment
+          {loading}
           </button>
-        {showSuccessMessage && <span className={styles.showSuccessMsg}>Comment submitted for review</span>}
+        {showSuccessMessage && <span className={styles.showSuccessMsg}>{feedback}</span>}
       </div>
     </section>
     )

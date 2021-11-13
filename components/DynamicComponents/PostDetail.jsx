@@ -8,6 +8,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import CommentForm from '../relations/CommentForm';
 import Footer from '../Footer/Footer';
+import ShowComments from '../relations/ShowComments';
 
 const PostDetail = ({post}) => {
 
@@ -93,7 +94,8 @@ const PostDetail = ({post}) => {
                         return getContentFragment(index, children, typeObj, typeObj.type)
                     })}
                 </section>
-                {/* <CommentForm slug={post.slug} /> */}
+                <CommentForm slug={post.slug} />
+                <ShowComments />
              </section>
 
              <section className={styles.sidebar}>

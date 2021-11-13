@@ -19,7 +19,7 @@ const Sermon = ({posts}) => {
     return (
        <>
        {/* <div className={styles.headerBack}> */}
-       <Header />
+       <Header effect={true} />
        {/* </div> */}
         <section className={styles.container}>
             <Layer1 value={ordered} setValue={setOrdered} />

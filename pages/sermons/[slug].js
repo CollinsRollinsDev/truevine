@@ -7,7 +7,7 @@ import styles from '../../styles/PostDetails.module.css'
 const PostDetails = ({post}) => {
     return (
         <section className={styles.container}>
-            <Header />
+            <Header effect={false} />
             <PostDetail post={post} />
         </section>
     )

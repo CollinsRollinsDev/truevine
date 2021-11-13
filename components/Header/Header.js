@@ -5,7 +5,7 @@ import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const Header = () => {
+const Header = ({effect}) => {
 
   useEffect(() => {
     AOS.init({ duration: 1500 });
@@ -13,11 +13,15 @@ const Header = () => {
 
   // States
   const [toggle, setToggle] = useState(false);
-  const [navBar, setNavBar] = useState(false);
+  const [navBar, setNavBar] = useState(effect ? false : true);
 
   // Added function to change color on scroll
   const scrollFunction = () => {
-    window.scrollY >= 50 ? setNavBar(true) : setNavBar(false);
+    if(!effect){
+      window.scrollY >= 50 ? setNavBar(true) : setNavBar(true);
+    } else{
+      window.scrollY >= 50 ? setNavBar(true) : setNavBar(false);
+    }
     // console.log(window.scrollY)
   };
 

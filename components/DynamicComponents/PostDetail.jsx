@@ -10,7 +10,7 @@ import "aos/dist/aos.css";
 const PostDetail = ({post}) => {
 
   useEffect(() => {
-    AOS.init({ duration: 1500 });
+    AOS.init({ duration: 500 });
   }, []);
 
 

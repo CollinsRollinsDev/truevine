@@ -3,6 +3,7 @@ import Image from "next/image";
 import react, {useState, useEffect} from 'react'
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Link from 'next/link';
 
 const RecentSermons = ({posts}) => {
   useEffect(() => {
@@ -10,7 +11,8 @@ const RecentSermons = ({posts}) => {
   }, []);
 
   const mappedSermons = posts.reverse().map((post) => (
-    <div key={post.slug} className={styles.sermons}>
+    <Link href={`/sermons/${post.slug}`}  key={post.slug} passHref>
+      <div className={styles.sermons}>
     <div className={styles.img}>
       <Image src={post.featuredImage.url} alt="Dummy for now" layout="fill" quality={50} />
     </div>
@@ -23,6 +25,7 @@ const RecentSermons = ({posts}) => {
       </div>
     </div>
   </div>
+    </Link>
   ))
 
   return (

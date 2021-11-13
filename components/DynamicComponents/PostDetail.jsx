@@ -6,6 +6,7 @@ import Image from 'next/image'
 import moment from 'moment';
 import AOS from "aos";
 import "aos/dist/aos.css";
+import CommentForm from '../relations/CommentForm';
 
 const PostDetail = ({post}) => {
 
@@ -90,6 +91,7 @@ const PostDetail = ({post}) => {
                         return getContentFragment(index, children, typeObj, typeObj.type)
                     })}
                 </section>
+                <CommentForm />
              </section>
 
              <section className={styles.sidebar}>

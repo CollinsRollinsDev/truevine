@@ -92,7 +92,7 @@ const PostDetail = ({post}) => {
                         return getContentFragment(index, children, typeObj, typeObj.type)
                     })}
                 </section>
-                {/* <CommentForm /> */}
+                {/* <CommentForm slug={post.slug} /> */}
              </section>
 
              <section className={styles.sidebar}>

@@ -3,7 +3,7 @@ import styles from './CommentForm.module.css';
 import { submitComment } from '../ApiRequests/getSermonPageBlogs';
 
 
-const CommentForm = ({slug}) => {
+const CommentForm = ({slug, setWatcher}) => {
     const [error, setError] = useState(false)
     const [localStorage, setLocalStorage] = useState(null);
     const [showSuccessMessage, setSuccessMessage] = useState(false)
@@ -54,6 +54,7 @@ const CommentForm = ({slug}) => {
       submitComment(commentObj).then((res) => {
         setLoading("Posting Comment. Please Wait");
         if(res.status === "success"){
+          setWatcher(prevState => prevState + 1)
           setFeedback(res.message)
           setSuccessMessage(true);
           setLoading("Comment Successfully Posted!")

@@ -11,6 +11,7 @@ import Footer from '../Footer/Footer';
 import ShowComments from '../relations/ShowComments';
 
 const PostDetail = ({post}) => {
+  const [watcher, setWatcher] = useState(0);
 
   useEffect(() => {
     AOS.init({ duration: 500 });
@@ -56,7 +57,6 @@ const PostDetail = ({post}) => {
         }
       };
 
-    console.log("individula post is :", post)
 
     return (
       <>
@@ -94,8 +94,8 @@ const PostDetail = ({post}) => {
                         return getContentFragment(index, children, typeObj, typeObj.type)
                     })}
                 </section>
-                <CommentForm slug={post.slug} />
-                <ShowComments />
+                <CommentForm slug={post.slug} setWatcher={setWatcher}/>
+                <ShowComments slug={post.slug} watcher={watcher}/>
              </section>
 
              <section className={styles.sidebar}>

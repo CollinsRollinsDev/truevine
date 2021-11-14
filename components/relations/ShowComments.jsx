@@ -19,21 +19,60 @@ const ShowComments = ({slug, watcher}) => {
         console.log(watcher)
     }, [watcher])
 
-    const displayComments = comments.comments ? comments.comments.map((comment, index) => (
-        <section key={index} className={styles.personComment}>
-        <div className={styles.avatarSpace}>
-            <Image 
-            src="/sermon2.jpg"
-            alt=""
-            layout="fill"
-            quality={50}
-            />
-        </div>
-        <div className={styles.textSpace}>
-        {comment.comment[0].name} says: <span>{comment.comment[0].content}</span>
-        </div>
-    </section>
-    )) : null
+    const displayComments = comments.comments ? comments.comments.map((comment, index) => {
+
+        const replySlide = comment.comment.map((e, index) => {
+            if(e._id === comment.comment[0]._id){
+                return;
+            } else{               
+           return (
+            <section key={index} className={styles.replyBox}>
+            {/* <div className={styles.avatarSpace}>
+                <Image 
+                src="/sermon2.jpg"
+                alt=""
+                layout="fill"
+                quality={50}
+                />
+            </div> */}
+            <div className={styles.textSpace}>
+            {e.name} says: <span>{e.content}</span>
+            </div>
+            </section>
+           )
+            }
+        })
+        const firstSlide = (
+            <section className={styles.overall}>
+            <section key={index} className={styles.personComment}>
+            <div className={styles.avatarSpace}>
+                <Image 
+                src="/sermon2.jpg"
+                alt=""
+                layout="fill"
+                quality={50}
+                />
+            </div>
+            <div className={styles.textSpace}>
+            {comment.comment[0].name} says: <span>{comment.comment[0].content}</span>
+            </div>
+        </section>
+        {replySlide}
+        </section>
+        )
+
+    
+      
+    {/* first half */}
+
+
+
+     
+
+
+        
+    return firstSlide;
+    }) : null
 
 
     return (

@@ -57,6 +57,10 @@ const PostDetail = ({post}) => {
         }
       };
 
+      useEffect(() => {
+        setWatcher(prevState => prevState + 1)
+      }, [post.slug])
+
 
     return (
       <>
@@ -94,7 +98,7 @@ const PostDetail = ({post}) => {
                         return getContentFragment(index, children, typeObj, typeObj.type)
                     })}
                 </section>
-                <CommentForm slug={post.slug} setWatcher={setWatcher}/>
+                <CommentForm nameField={true} emailField={true} slug={post.slug} setWatcher={setWatcher}/>
                 <ShowComments slug={post.slug} watcher={watcher}/>
              </section>
 

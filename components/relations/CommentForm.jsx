@@ -3,7 +3,7 @@ import styles from './CommentForm.module.css';
 import { submitComment } from '../ApiRequests/getSermonPageBlogs';
 
 
-const CommentForm = ({slug, setWatcher}) => {
+const CommentForm = ({slug, setWatcher, nameField, emailField}) => {
     const [error, setError] = useState(false)
     const [localStorage, setLocalStorage] = useState(null);
     const [showSuccessMessage, setSuccessMessage] = useState(false)
@@ -46,7 +46,7 @@ const CommentForm = ({slug, setWatcher}) => {
       if(storeData){
         window.localStorage.setItem("name", name);
         window.localStorage.setItem("email", email);
-
+      } else{
         window.localStorage.removeItem("name", name);
         window.localStorage.removeItem("email", email);
       }

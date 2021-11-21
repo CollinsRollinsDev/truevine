@@ -1,33 +1,119 @@
-import React, {useState, useEffect} from 'react'
-import styles from './ShowComments.module.css';
-import Image from 'next/image'
+import React, { useState, useEffect, useRef } from "react";
+import styles from "./ShowComments.module.css";
+import Image from "next/image";
+import CommentForm from "./CommentForm";
 
-const ShowComments = ({slug, watcher}) => {
-    const [comments, setComments] = useState([])
+const ShowComments = ({ slug, watcher }) => {
+  const [reply, setReply] = useState(false);
+  const [replyBtnText, setReplyBtnText] = useState("Reply");
+  const [comments, setComments] = useState([]);
+  const [presentClick, setPresentClick] = useState();
+  const [loading, setLoading] = useState("Post Comment")
+  const [error, setError] = useState(false)
+  const [feedback, setFeedback] = useState()
+  
 
-    const getComments = async() => {
-        const res = await fetch(`/api/get-comment?slug=${slug}`);
-        const data = await res.json();
-        setComments(data.data)
-        console.log(comments)
+//   {showSuccessMessage && <span className={styles.showSuccessMsg}>{feedback}</span>}
+
+  const commentEl = useRef();
+
+  const getComments = async () => {
+    const res = await fetch(`/api/get-comment?slug=${slug}`);
+    const data = await res.json();
+    setComments(data.data);
+    console.log("runned now with slug:", slug);
+  };
+
+  console.log(comments);
+
+  useEffect(() => {
+    getComments();
+    console.log(watcher);
+    console.log("runned now with slug:", slug);
+  }, [watcher]);
+
+  const handleReplyClick = async (comment) => {
+    setPresentClick(comment);
+    reply ? setReply(false) : setReply(true);
+    reply ? setReplyBtnText("Reply") : setReplyBtnText("Cancel");
+  };
+
+  const handleCommentSubmission = () => {
+    setError(false);
+    setLoading(loading = "Posting Comment. Please Wait");
+
+    const {value: comment} = commentEl.current
+    const name = "Admin Testing"
+    const email = "Admin Email Testing"
+
+    if(!comment || !name || !email){
+      setError(true)
+      return;
     }
 
-    console.log(comments)
+    const commentObj = {
+      name, email, comment, slug
+    }
 
-    useEffect(() => {
-        getComments()
-        console.log(watcher)
-    }, [watcher])
+    // submitComment(commentObj).then((res) => {
+    //   setLoading("Posting Comment. Please Wait");
+    //   if(res.status === "success"){
+    //     setWatcher(prevState => prevState + 1)
+    //     setFeedback(res.message)
+    //     setSuccessMessage(true);
+    //     setLoading("Comment Successfully Posted!")
+    //     setTimeout(() => {
+    //       setSuccessMessage(false)
+    //       setLoading("Post Comment");
+    //     }, 3000);
+    //   } else{
+    //     setFeedback("Something went wrong. Try again later.")
+    //     setSuccessMessage(true);
+    //     setLoading("Oops! Error posting comment.")
+    //     setTimeout(() => {
+    //       setSuccessMessage(false)
+    //       setLoading("Post Comment");
+    //     }, 3000);
+    //   }
+     
+    // })
+    setLoading("Post comment");
+    console.log("comment sent")
 
-    const displayComments = comments.comments ? comments.comments.map((comment, index) => {
+  }
 
+  const dialogueBox = (
+    <section>
+      <div className={styles.textareaDiv}>
+        <textarea
+          ref={commentEl}
+          // value={formData.comment}
+          // onChange={onInputChange}
+          className={styles.textarea}
+          name="comment"
+          placeholder="Comment"
+        />
+      </div>
+
+      <button
+        type="button"
+        onClick={handleCommentSubmission}
+        className={styles.postComment}
+      >
+        {loading}
+      </button>
+    </section>
+  );
+
+  const displayComments = comments.comments
+    ? comments.comments.map((comment, index) => {
         const replySlide = comment.comment.map((e, index) => {
-            if(e._id === comment.comment[0]._id){
-                return;
-            } else{               
-           return (
-            <section key={index} className={styles.replyBox}>
-            {/* <div className={styles.avatarSpace}>
+          if (e._id === comment.comment[0]._id) {
+            return;
+          } else {
+            return (
+              <section key={index} className={styles.replyBox}>
+                {/* <div className={styles.avatarSpace}>
                 <Image 
                 src="/sermon2.jpg"
                 alt=""
@@ -35,53 +121,49 @@ const ShowComments = ({slug, watcher}) => {
                 quality={50}
                 />
             </div> */}
-            <div className={styles.textSpace}>
-            {e.name} says: <span>{e.content}</span>
-            </div>
-            </section>
-           )
-            }
-        })
+                <div className={styles.textSpace}>
+                  {e.name} says: <span>{e.content}</span>
+                </div>
+              </section>
+            );
+          }
+        });
         const firstSlide = (
-            <section className={styles.overall}>
+          <section className={styles.overall}>
             <section key={index} className={styles.personComment}>
-            <div className={styles.avatarSpace}>
-                <Image 
-                src="/sermon2.jpg"
-                alt=""
-                layout="fill"
-                quality={50}
-                />
-            </div>
-            <div className={styles.textSpace}>
-            {comment.comment[0].name} says: <span>{comment.comment[0].content}</span>
-            </div>
-        </section>
-        {replySlide}
-        </section>
-        )
-
-    
-      
-    {/* first half */}
-
-
-
-     
-
-
-        
-    return firstSlide;
-    }) : null
-
-
-    return (
-        <section className={styles.container}>
-            <section className={styles.commentArea}>
-               {displayComments}
+              <div className={styles.avatarSpace}>
+                <Image src="/sermon2.jpg" alt="" layout="fill" quality={50} />
+              </div>
+              <div className={styles.textSpace}>
+                <p>
+                  {comment.comment[0].name} says:{" "}
+                  <span>{comment.comment[0].content}</span>
+                </p>
+                <div
+                  onClick={() => handleReplyClick(comment)}
+                  className={styles.reply}
+                >
+                  {presentClick === comment ? replyBtnText : "Reply"}
+                </div>
+                {presentClick === comment ? (
+                  reply ? (
+                    dialogueBox
+                  ) : null
+                ) : null}
+              </div>
             </section>
-        </section>
-    )
-}
+            {replySlide}
+          </section>
+        );
+        return firstSlide;
+      })
+    : null;
 
-export default ShowComments
+  return (
+    <section className={styles.container}>
+      <section className={styles.commentArea}>{displayComments}</section>
+    </section>
+  );
+};
+
+export default ShowComments;

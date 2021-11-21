@@ -37,12 +37,14 @@ const ShowComments = ({ slug, watcher, setWatcher }) => {
     reply ? setReplyBtnText("Reply") : setReplyBtnText("Cancel");
   };
 
+  console.log(presentClick, "present click")
+
   const handleCommentSubmission = () => {
       const commentId = presentClick._id;
     setError(false);
     setLoading(loading = "Posting Comment. Please Wait");
 
-    const {value: comment} = commentEl.current
+    const {value: comment} = commentEl.current;
     const name = "Admin Testing"
     const email = "Admin Email Testing"
 
@@ -94,7 +96,9 @@ const ShowComments = ({ slug, watcher, setWatcher }) => {
           className={styles.textarea}
           name="comment"
           placeholder="Comment"
-        />
+        >
+        {presentClick ? `@${presentClick.name}, ` : null}
+        </textarea>
       </div>
 
       <button
@@ -125,6 +129,17 @@ const ShowComments = ({ slug, watcher, setWatcher }) => {
             </div> */}
                 <div className={styles.textSpace}>
                   {e.name} says: <span>{e.content}</span>
+                  <div
+                  onClick={() => handleReplyClick(e)}
+                  className={styles.subReply}
+                >
+                  {presentClick === e ? replyBtnText : "Reply"}
+                </div>
+                {presentClick === e ? (
+                  reply ? (
+                    dialogueBox 
+                  ) : null
+                ) : null}
                 </div>
               </section>
             );

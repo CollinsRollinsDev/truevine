@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import styles from "./ShowComments.module.css";
 import Image from "next/image";
-import CommentForm from "./CommentForm";
+import { replyComment } from "../ApiRequests/getSermonPageBlogs";
 
-const ShowComments = ({ slug, watcher }) => {
+const ShowComments = ({ slug, watcher, setWatcher }) => {
   const [reply, setReply] = useState(false);
   const [replyBtnText, setReplyBtnText] = useState("Reply");
   const [comments, setComments] = useState([]);
@@ -11,9 +11,8 @@ const ShowComments = ({ slug, watcher }) => {
   const [loading, setLoading] = useState("Post Comment")
   const [error, setError] = useState(false)
   const [feedback, setFeedback] = useState()
-  
+  const [showSuccessMessage, setSuccessMessage] = useState(false)
 
-//   {showSuccessMessage && <span className={styles.showSuccessMsg}>{feedback}</span>}
 
   const commentEl = useRef();
 
@@ -39,6 +38,7 @@ const ShowComments = ({ slug, watcher }) => {
   };
 
   const handleCommentSubmission = () => {
+      const commentId = presentClick._id;
     setError(false);
     setLoading(loading = "Posting Comment. Please Wait");
 
@@ -52,33 +52,35 @@ const ShowComments = ({ slug, watcher }) => {
     }
 
     const commentObj = {
-      name, email, comment, slug
+      name, comment, slug, commentId
     }
 
-    // submitComment(commentObj).then((res) => {
-    //   setLoading("Posting Comment. Please Wait");
-    //   if(res.status === "success"){
-    //     setWatcher(prevState => prevState + 1)
-    //     setFeedback(res.message)
-    //     setSuccessMessage(true);
-    //     setLoading("Comment Successfully Posted!")
-    //     setTimeout(() => {
-    //       setSuccessMessage(false)
-    //       setLoading("Post Comment");
-    //     }, 3000);
-    //   } else{
-    //     setFeedback("Something went wrong. Try again later.")
-    //     setSuccessMessage(true);
-    //     setLoading("Oops! Error posting comment.")
-    //     setTimeout(() => {
-    //       setSuccessMessage(false)
-    //       setLoading("Post Comment");
-    //     }, 3000);
-    //   }
+    replyComment(commentObj).then((res) => {
+      setLoading("Posting Comment. Please Wait");
+      if(res.status === "success"){
+        setWatcher(prevState => prevState + 1)
+        setFeedback(res.message)
+        setSuccessMessage(true);
+
+        setReply(false);
+        
+        setLoading("Comment Successfully Posted!")
+        setTimeout(() => {
+          setSuccessMessage(false)
+          setLoading("Post Comment");
+        }, 3000);
+      } else{
+        setFeedback("Something went wrong. Try again later.")
+        setSuccessMessage(true);
+        setLoading("Oops! Error posting comment.")
+        setTimeout(() => {
+          setSuccessMessage(false)
+          setLoading("Post Comment");
+        }, 3000);
+      }
      
-    // })
+    })
     setLoading("Post comment");
-    console.log("comment sent")
 
   }
 
@@ -147,7 +149,7 @@ const ShowComments = ({ slug, watcher }) => {
                 </div>
                 {presentClick === comment ? (
                   reply ? (
-                    dialogueBox
+                    dialogueBox 
                   ) : null
                 ) : null}
               </div>

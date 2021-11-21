@@ -99,7 +99,7 @@ const PostDetail = ({post}) => {
                     })}
                 </section>
                 <CommentForm nameField={true} emailField={true} slug={post.slug} setWatcher={setWatcher}/>
-                <ShowComments slug={post.slug} watcher={watcher}/>
+                <ShowComments slug={post.slug} watcher={watcher} setWatcher={setWatcher}/>
              </section>
 
              <section className={styles.sidebar}>

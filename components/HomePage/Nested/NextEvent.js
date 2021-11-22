@@ -4,20 +4,36 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import {  useState, useEffect } from 'react';
 
-const NextEvent = () => {
+const NextEvent = ({events}) => {
   useEffect(() => {
     AOS.init({ duration: 1500 });
   }, []);
-
+    
     const [seconds, setSeconds] = useState();
     const [minutes, setMinutes] = useState();
     const [hours, setHours] = useState();
     const [days, setDays] = useState()
 
+
+    const getLatestEvent = async() => {
+     
+     
+    }
+
+    useEffect(()=> {
+      console.log(events[0])
+      getLatestEvent()
+    },[])
+
  // Function that get to countdown to specific date
  const UpcomingEventTimer = async () => {
-  // Setting deadline date
-  let stoppageTime = new Date("Dec 10,2021 23:59:59").getTime();
+  if(!events){
+
+  } else{
+
+      // Setting deadline date
+  // let stoppageTime = new Date("Dec 10,2021 23:59:59").getTime();
+  let stoppageTime = new Date(events[0].date).getTime();
 
   // Using set interval to continuously get the time after each one seconds
   let theTime = setInterval(() => {
@@ -41,11 +57,12 @@ const NextEvent = () => {
     // clear interval if time is up
     remainingTime < 0 ? clearInterval(theTime) : null;
   }, 1000);
+  }
 };
 
   useEffect(() => {
     UpcomingEventTimer();
-  },[])
+  },[events])
 
   return (
     <section data-aos="fade-up" className={styles.container}>
@@ -58,10 +75,10 @@ const NextEvent = () => {
       <div className={styles.first}>
         <div>Upcoming Event...</div>
         <div className={styles.eventTheme}>
-            Theme: <span>Too Hot To Be Hot!</span>
+            Theme: <span>{events ? events[0].theme : "None"}</span>
         </div>
       </div>
-      <div className={styles.second}>
+     {events ?  <div className={styles.second}>
           <div>
             Days
             <span>{days}</span>
@@ -78,7 +95,7 @@ const NextEvent = () => {
             Seconds
             <span>{seconds}</span>
           </div>
-      </div>
+      </div> : "No Event To Show"}
     </section>
   );
 };

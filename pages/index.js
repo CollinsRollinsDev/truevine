@@ -3,10 +3,10 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import HomePage from '../components/HomePage/HomePage'
 import { getRecentPosts } from '../components/ApiRequests/getSermonPageBlogs'
-export default function Home({posts}) {
+import { getEvents } from '../components/ApiRequests/getSermonPageBlogs'
+export default function Home({posts, events}) {
 
-  console.log(posts)
-
+  
 
   return (
     <div className={styles.container}>
@@ -16,7 +16,7 @@ export default function Home({posts}) {
         <link rel="icon" href="/churchLogo1.png" />
       </Head>
       {/* <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} /> */}
-    <HomePage posts={posts}/>
+    <HomePage posts={posts} events={events}/>
     </div>
   )
 }
@@ -24,9 +24,10 @@ export default function Home({posts}) {
 
 export async function getStaticProps() {
   let posts = (await getRecentPosts()) || []
+  let events = (await getEvents()) || []
   return{
     props: {
-      posts
+      posts, events
     }
   }
 }

@@ -160,3 +160,33 @@ export const replyComment = async(obj) => {
   })
   return result.json()
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export const getEvents = async () => {
+  const query = gql`
+ query MyQuery {
+  events {
+    theme
+    date
+    id
+  }
+}
+`
+  const result = await request(graphqlAPI, query)
+  return result.events
+}

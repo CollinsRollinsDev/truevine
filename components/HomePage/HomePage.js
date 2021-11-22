@@ -8,7 +8,7 @@ import Head from "next/head";
 import LastLayer from "./Nested/LastLayer";
 import Footer from "../Footer/Footer";
 
-const HomePage = ({posts}) => {
+const HomePage = ({posts, events}) => {
   return (
     <section className={styles.container}>
         {/* <Head>
@@ -19,7 +19,7 @@ const HomePage = ({posts}) => {
       </Head> */}
       <Header effect={true} />
       <PreBody />
-      <NextEvent />
+      <NextEvent events={events.reverse()} />
       <RecentSermons posts={posts} />
       <Statements />
       <LastLayer />

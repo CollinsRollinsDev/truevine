@@ -98,8 +98,13 @@ const PostDetail = ({post}) => {
                         return getContentFragment(index, children, typeObj, typeObj.type)
                     })}
                 </section>
+                
                 <CommentForm nameField={true} emailField={true} slug={post.slug} setWatcher={setWatcher}/>
                 <ShowComments slug={post.slug} watcher={watcher} setWatcher={setWatcher}/>
+
+                <div id="showing-comment">
+                </div>
+
              </section>
 
              <section className={styles.sidebar}>

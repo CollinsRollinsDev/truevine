@@ -17,8 +17,8 @@ const Layer2 = ({posts}) => {
   console.log(posts);
 
     const sermons = posts.map((post, index) => (
-       <Link href={`/sermons/${post.node.slug}`} key={post.node.slug} passHref >
-          <section data-aos="fade-up" className={styles.contain}>
+       
+        <section data-aos="fade-up" key={post.node.slug} className={styles.contain}>
         <section className={styles.imgSpace}>
           <section className={styles.imgs}>
             <Image 
@@ -56,16 +56,22 @@ const Layer2 = ({posts}) => {
             </div>
           </section>
           <section className={styles.second}>
+            <Link href={`/sermons/${post.node.slug}`} passHref >
               <div className={styles.readmore}>
                   Read More
               </div>
+            </Link>
+
+
+              <Link href={`/sermons/${post.node.slug}#showing-comment`}>
               <div className={styles.comment}>
                   Comments
               </div>
+              </Link>
+
           </section>
         </section>
       </section>
-       </Link>
     ))
 
   return (

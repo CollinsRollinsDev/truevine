@@ -40,11 +40,8 @@
     justify-content: flex-start;
     align-items: center;
     box-shadow: 2px 2px 5px black;
-    cursor: pointer;
 }
-.contain:active{
-    opacity: 0.5;
-}
+
 .imgSpace{
     height: 100%;
     width: 100%;
@@ -187,6 +184,16 @@
     font-weight: 700;
     cursor: pointer;
 }
+
+.readmore:hover{
+    color: brown;
+}
+.readmore:active{
+    opacity: 0;
+}
+.readmore:visited{
+    color: rgb(134, 18, 18);
+}
 .comment{
     padding: 2%;
     border-radius: 5px;
@@ -195,6 +202,12 @@
     font-weight: 700;
     font-family: Arial, Helvetica, sans-serif;
     cursor: pointer;
+}
+.comment:hover{
+    background-color: brown;
+}
+.comment:active{
+    opacity: 0;
 }
 
 

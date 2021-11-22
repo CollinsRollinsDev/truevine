@@ -45,9 +45,9 @@ const Header = ({effect}) => {
         <Link href="/sermon" passHref>
         <div>Sermon</div>
         </Link>
-        <div>Services</div>
+        {/* <div>Services</div>
         <div>About</div>
-        <div>Contact</div>
+        <div>Contact</div> */}
         <Link href="/login" passHref>
           <div>Login</div>
         </Link>
@@ -81,9 +81,9 @@ const Header = ({effect}) => {
             <Link href="/sermon" passHref>
         <li>Sermon</li>
         </Link>
-            <li>Services</li>
+            {/* <li>Services</li>
             <li>About</li>
-            <li>Contact</li>
+            <li>Contact</li> */}
             <Link href="/login" passHref>
               <li>Login</li>
             </Link>

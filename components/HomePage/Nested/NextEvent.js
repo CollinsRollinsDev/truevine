@@ -13,27 +13,37 @@ const NextEvent = ({events}) => {
     const [minutes, setMinutes] = useState();
     const [hours, setHours] = useState();
     const [days, setDays] = useState()
+    let [sortedEvents, setSortedEvents] = useState();
 
+    function sortFunction(a, b) {
+      var dateA = new Date(a.date).getTime();
+      var dateB = new Date(b.date).getTime();
+      return dateA > dateB ? 1 : -1;
+    }
 
     const getLatestEvent = async() => {
-     
-     
+      const newEvent = [...events]
+      const sorted = newEvent.sort(sortFunction).map((event, index) => {
+        return event
+      })
+      if(sorted){
+        setSortedEvents(sortedEvents = sorted)
+      }
     }
 
     useEffect(()=> {
-      console.log(events[0])
       getLatestEvent()
     },[])
 
  // Function that get to countdown to specific date
  const UpcomingEventTimer = async () => {
-  if(!events){
+  if(!events && !sortedEvents){
 
   } else{
 
       // Setting deadline date
   // let stoppageTime = new Date("Dec 10,2021 23:59:59").getTime();
-  let stoppageTime = new Date(events[0].date).getTime();
+  let stoppageTime = new Date(sortedEvents[0].date).getTime();
 
   // Using set interval to continuously get the time after each one seconds
   let theTime = setInterval(() => {
@@ -75,7 +85,7 @@ const NextEvent = ({events}) => {
       <div className={styles.first}>
         <div>Upcoming Event...</div>
         <div className={styles.eventTheme}>
-            Theme: <span>{events ? events[0].theme : "None"}</span>
+            Theme: <span>{sortedEvents ? sortedEvents[0].theme : "None"}</span>
         </div>
       </div>
      {events ?  <div className={styles.second}>

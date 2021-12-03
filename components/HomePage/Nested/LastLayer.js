@@ -25,10 +25,11 @@ const LastLayer = () => {
             <div className={styles.firstText}>Location</div>
           </div>
           <div className={styles.second}>
-            <p>20, Enilolobo Street,</p>
+            <p>6, Enilolobo Street,</p>
             <p>Dopemu, Agege</p>
             <p>Lagos, Nigeria</p>
           </div>
+          
         </div>
 
         <div className={styles.subContainer}>

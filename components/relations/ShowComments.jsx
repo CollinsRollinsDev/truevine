@@ -49,7 +49,9 @@ const ShowComments = ({ slug, watcher, setWatcher }) => {
     const email = "Admin Email Testing"
 
     if(!comment || !name || !email){
+      alert("Please add comment first")
       setError(true)
+      setReplyBtnText("Reply")
       return;
     }
 
@@ -97,7 +99,7 @@ const ShowComments = ({ slug, watcher, setWatcher }) => {
           name="comment"
           placeholder="Comment"
         >
-        {presentClick ? `@${presentClick.name}, ` : null}
+        {/* {presentClick ? `@${presentClick.name}, ` : null} */}
         </textarea>
       </div>
 
@@ -119,22 +121,22 @@ const ShowComments = ({ slug, watcher, setWatcher }) => {
           } else {
             return (
               <section key={index} className={styles.replyBox}>
-                {/* <div className={styles.avatarSpace}>
+                <div className={styles.avatarSpace}>
                 <Image 
                 src="/sermon2.jpg"
                 alt=""
                 layout="fill"
                 quality={50}
                 />
-            </div> */}
+            </div>
                 <div className={styles.textSpace}>
                   {e.name} says: <span>{e.content}</span>
-                  <div
+                  {/* <div
                   onClick={() => handleReplyClick(e)}
                   className={styles.subReply}
                 >
                   {presentClick === e ? replyBtnText : "Reply"}
-                </div>
+                </div> */}
                 {presentClick === e ? (
                   reply ? (
                     dialogueBox 
@@ -156,7 +158,11 @@ const ShowComments = ({ slug, watcher, setWatcher }) => {
                   {comment.comment[0].name} says:{" "}
                   <span>{comment.comment[0].content}</span>
                 </p>
-                <div
+               
+              </div>
+            </section>
+            {replySlide}
+            <div
                   onClick={() => handleReplyClick(comment)}
                   className={styles.reply}
                 >
@@ -167,9 +173,6 @@ const ShowComments = ({ slug, watcher, setWatcher }) => {
                     dialogueBox 
                   ) : null
                 ) : null}
-              </div>
-            </section>
-            {replySlide}
           </section>
         );
         return firstSlide;

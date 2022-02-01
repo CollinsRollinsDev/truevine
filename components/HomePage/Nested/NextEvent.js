@@ -49,7 +49,6 @@ const NextEvent = ({events}) => {
       if(sorted){
         setSortedEvents(sortedEvents = sorted)
       }
-
     }
 
     useEffect(()=> {

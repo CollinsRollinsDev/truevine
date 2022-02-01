@@ -3,6 +3,7 @@ import Head from "next/head";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import {  useState, useEffect } from 'react';
+import moment from 'moment'
 
 const NextEvent = ({events}) => {
   useEffect(() => {
@@ -13,7 +14,8 @@ const NextEvent = ({events}) => {
     const [minutes, setMinutes] = useState();
     const [hours, setHours] = useState();
     const [days, setDays] = useState()
-    let [sortedEvents, setSortedEvents] = useState();
+    let [sortedEvents, setSortedEvents] = useState([]);
+    const [validEvents, setValidEvents] = useState([])
 
     function sortFunction(a, b) {
       var dateA = new Date(a.date).getTime();
@@ -23,12 +25,31 @@ const NextEvent = ({events}) => {
 
     const getLatestEvent = async() => {
       const newEvent = [...events]
-      const sorted = newEvent.sort(sortFunction).map((event, index) => {
+
+      const validSorted = await events.filter((item) => {
+        let milli = 604800000;
+        let currentDate = moment();
+        let date = moment(item.date);
+        let result = currentDate.diff(date)
+        console.log(date > currentDate)
+        if(date > currentDate){
+          console.log("passed")
+          return item
+        } else{
+          setValidEvents([...validEvents, item]);
+          console.log("failed")
+
+        }
+
+      })
+      console.log(validSorted, "as validEvent")
+      const sorted = validSorted.sort(sortFunction).map((event, index) => {
         return event
       })
       if(sorted){
         setSortedEvents(sortedEvents = sorted)
       }
+
     }
 
     useEffect(()=> {
@@ -40,7 +61,7 @@ const NextEvent = ({events}) => {
   if(!events && !sortedEvents){
 
   } else{
-
+    console.log(sortedEvents,"as sorted event");
       // Setting deadline date
   // let stoppageTime = new Date("Dec 10,2021 23:59:59").getTime();
   let stoppageTime = new Date(sortedEvents[0].date).getTime();
@@ -71,8 +92,10 @@ const NextEvent = ({events}) => {
 };
 
   useEffect(() => {
-    UpcomingEventTimer();
-  },[events])
+    sortedEvents.length > 0 &&  UpcomingEventTimer();
+    console.log(sortedEvents, "as sorted events")
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[events, sortedEvents])
 
   return (
     <section data-aos="fade-up" className={styles.container}>
@@ -85,10 +108,10 @@ const NextEvent = ({events}) => {
       <div className={styles.first}>
         <div>Upcoming Event...</div>
         <div className={styles.eventTheme}>
-            Theme: <span>{sortedEvents ? sortedEvents[0].theme : "None"}</span>
+            Theme: <span>{sortedEvents.length > 0 ? sortedEvents[0].theme : "None"}</span>
         </div>
       </div>
-     {events ?  <div className={styles.second}>
+     {sortedEvents.length > 0 ?  <div className={styles.second}>
           <div>
             Days
             <span>{days}</span>
@@ -105,7 +128,7 @@ const NextEvent = ({events}) => {
             Seconds
             <span>{seconds}</span>
           </div>
-      </div> : "No Event To Show"}
+      </div> : <div className={styles.second}>No Event To Show</div>}
     </section>
   );
 };

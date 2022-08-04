@@ -2,11 +2,13 @@ import styles from "./PreBody.module.css";
 import Image from "next/image";
 import { slider } from "./ImageSlider";
 import AOS from "aos";
+import { useRouter } from 'next/router'
 import "aos/dist/aos.css";
 import { useState, useEffect, useMemo, useCallback, useRef } from "react";
+import { FaGooglePlay } from 'react-icons/fa';
 
 const PreBody = () => {
-
+  const router = useRouter()
   useEffect(() => {
     AOS.init({ duration: 1500 });
   }, []);
@@ -44,6 +46,10 @@ const PreBody = () => {
     }, 4000);
     return () => clearInterval(x);
   }, []);
+
+  const goToAppLink = () => {
+    router.push('https://drive.google.com/uc?export=download&id=1xid7cbxabUlD4u0UKHA6v7eWTk9UtNC_')
+  }
 
 //   const displayImages = 
 
@@ -178,6 +184,7 @@ const PreBody = () => {
           <p className={styles.head}>Welcome to Truevine Christian Centre</p>
           {/* <p className={styles.subHead}>{wordFill}</p> */}
           <div className={styles.buttonsDiv}>
+            <div onClick={goToAppLink} style={{fontSize:12}}>Get our Mobile App <FaGooglePlay /></div>
             <button>Book Appiontments</button>
             <button>Donate</button>
           </div>

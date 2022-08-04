@@ -48,12 +48,12 @@ const Header = ({effect}) => {
         {/* <div>Services</div>
         <div>About</div>
         <div>Contact</div> */}
-        <Link href="/login" passHref>
+        {/* <Link href="/login" passHref>
           <div>Login</div>
         </Link>
         <Link href="/signup" passHref>
           <div>Register</div>
-        </Link>
+        </Link> */}
       </section>
     </section>
   );
@@ -147,7 +147,7 @@ const Header = ({effect}) => {
           .container.active {
             width: 100%;
             height: 90px;
-            background-color: brown;
+            background-color: #3452eb;
             position: fixed;
             z-index: 1;
             outline: none;
@@ -168,7 +168,7 @@ const Header = ({effect}) => {
               display: flex;
               justify-content: center;
               align-items: center;
-              fill: brown;
+              fill: #3452eb;
               font-weight: 700;
               flex: 1;
             }
@@ -180,7 +180,7 @@ const Header = ({effect}) => {
               display: flex;
               justify-content: center;
               align-items: center;
-              fill: brown;
+              fill: #3452eb;
             }
             .profile.active {
               fill: white;

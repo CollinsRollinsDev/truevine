@@ -1,7 +1,7 @@
 .parentOverall {
   height: 500px;
   width: 100%;
-  background-color: rgb(43, 18, 18);
+  background-color: #020f54;
   display: flex;
   position: relative;
   flex-direction: column;
@@ -80,7 +80,7 @@
   border-radius: 20px;
   width: 60%;
   height: 40px;
-  background-color: brown;
+  background-color: #3452eb;
   color: white;
   cursor: pointer;
   font-weight: 700;
@@ -89,7 +89,7 @@
 }
 .knowMore:hover {
   background-color: rgb(168, 167, 167);
-  color: brown;
+  color: #3452eb;
 }
 .knowMore:active {
   opacity: 0.2;

@@ -41,7 +41,7 @@
 }
 .sermons .content{
     flex: 1;
-    background-color: rgba(165, 42, 42, 0.76);
+    background-color: #1a2d8dc4;
     height: 100%;
     width: 100%;
     display: flex;

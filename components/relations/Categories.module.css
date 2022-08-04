@@ -40,7 +40,7 @@
     box-shadow: 1px 1px 5px black;
 }
 .mapped div:hover{
-    color: brown;
+    color: #3452eb;
 }
 .mapped div:active{
     opacity: 0;

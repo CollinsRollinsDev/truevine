@@ -186,7 +186,7 @@
 }
 
 .readmore:hover{
-    color: brown;
+    color: #3452eb;
 }
 .readmore:active{
     opacity: 0;
@@ -204,7 +204,7 @@
     cursor: pointer;
 }
 .comment:hover{
-    background-color: brown;
+    background-color: #3452eb;
 }
 .comment:active{
     opacity: 0;

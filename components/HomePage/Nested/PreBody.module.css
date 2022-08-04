@@ -78,7 +78,7 @@
   .buttonsDiv button {
     height: 50px;
     width: 15%;
-    background-color: rgb(123, 10, 10);
+    background-color: #020f54;
     color: white;
     font-weight: 700;
     text-align: center;
@@ -90,7 +90,7 @@
   }
   .buttonsDiv button:hover {
     background-color: white;
-    color: rgb(123, 10, 10);
+    color: #020f54;
   }
   .buttonsDiv button:active {
     opacity: 0.1;

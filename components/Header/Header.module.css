@@ -47,7 +47,7 @@
   }
   .menuContainer li:hover {
     color: white;
-    background-color: brown;
+    background-color: #3452eb;
   }
   .desktop {
     display: block;
@@ -84,7 +84,7 @@
   }
   .menu div:hover{
      background-color: white;
-     color: brown;
+     color: #3452eb;
      font-weight: 700;
   }
   

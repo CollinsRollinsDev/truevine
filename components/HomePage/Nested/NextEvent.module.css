@@ -8,7 +8,7 @@
 }
 .first {
   flex: 1;
-  background-color: brown;
+  background-color: #3452eb;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -31,7 +31,7 @@
 }
 .second {
   flex: 2;
-  background-color: brown;
+  background-color: #3452eb;
   display: flex;
   align-items: center;
   column-gap: 20px;

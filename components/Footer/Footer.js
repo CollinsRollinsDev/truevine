@@ -90,7 +90,7 @@ const Footer = () => {
         </section>
 
         <section className={styles.credit}>
-          Copyright © 2021 All Rights Reserved || truevine christian centre
+          Copyright © 2022 All Rights Reserved || truevine christian centre
         </section>
       </section>
     </>

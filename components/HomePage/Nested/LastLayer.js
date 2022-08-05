@@ -50,7 +50,6 @@ const LastLayer = () => {
             <p>Sundays at 8:00AM [Sunday Worship Service]</p>
           </div>
         </div>
-
         <div className={styles.subContainer}>
           <div className={styles.first}>
             <svg

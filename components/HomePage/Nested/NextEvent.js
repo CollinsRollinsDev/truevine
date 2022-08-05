@@ -98,6 +98,7 @@ const NextEvent = ({events}) => {
 
   return (
     <section data-aos="fade-up" className={styles.container}>
+    {/* <section data-aos="fade-up" className={styles.container}> */}
       {/* <Head>
         <style>
           @import

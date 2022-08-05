@@ -64,8 +64,8 @@ const LastLayer = () => {
             <div className={styles.secondText}>Get In Touch</div>
           </div>
           <div className={styles.second}>
-            <p>Email us @ <a href="mailto:support@wifispace.com.ng">truevine-support</a></p>
-            <p>contact us via <a href="tel:+2348144872744">090909908383</a></p>
+            {/* <p>Email us @ <a href="mailto:support@wifispace.com.ng">truevine-support</a></p> */}
+            <p>contact us via <a href="tel:+2348038335315">0803 833 5315</a></p>
           </div>
         </div>
       </section>

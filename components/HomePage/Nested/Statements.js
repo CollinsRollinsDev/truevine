@@ -26,9 +26,8 @@ const Statements = () => {
             </div>
             <div>Mission</div>
           </section>
-          <section className={styles.textArea}>
-            To gather all natives of the kingdom for the readiness of the lords
-            coming.
+          <section className={styles.textAreaMission}>
+            The recover and empowerment of the lost believers with true knowledge of the kingdom Virtues, Cultures, Rights and Privileges.
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="60%"
@@ -86,9 +85,10 @@ const Statements = () => {
             <div>Pillars of Faith</div>
           </section>
 
-          <section className={styles.textArea}>
-            To gather all natives of the kingdom for the readiness of the lords
-            coming.
+          <section className={styles.textAreaPillar}>
+            Truevine Christain Centre has the mandate of God for Total Gospel which is princpally to inculate Kingdom Culture and Virtues, and the consequent benefits which are Rights and Privileges of every citizen of the Kingdom. In this end time, the word of God has been severly compromise such that tofay, there are praying centres of all sorts with ultimate goal of enriching selves, which as a matter of neccessity compelled many to adulterate the Word of life. 
+
+            At Truevine, the word of God is the basis for the Gospel. It is the nub of the beliefs of the ministry and teachings. We live on the Word and convey scriptural values from which our manuals are developed as inspired by the Holy Spirit.
             <svg
               width="60%"
               height="60%"

@@ -34,6 +34,7 @@
 .sermons:hover{
     opacity: 0.8;
 }
+
 .sermons .img{
     flex: 3;
     height: 100%;

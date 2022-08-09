@@ -84,12 +84,12 @@ const Header = ({effect}) => {
             {/* <li>Services</li>
             <li>About</li>
             <li>Contact</li> */}
-            <Link href="/login" passHref>
+            {/* <Link href="/login" passHref>
               <li>Login</li>
             </Link>
             <Link href="/signup" passHref>
               <li>Register</li>
-            </Link>
+            </Link> */}
           </div>
         </div>
 

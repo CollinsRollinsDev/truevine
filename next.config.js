@@ -4,4 +4,3 @@ module.exports = {
     domains: ['media.graphcms.com', 'media.graphassets.com', 'www.truevinechristiancentre.org'],
   },
 }
-

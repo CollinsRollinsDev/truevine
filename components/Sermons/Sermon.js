@@ -18,6 +18,7 @@ const Sermon = ({posts}) => {
 
     return (
        <>
+       
        {/* <div className={styles.headerBack}> */}
        <Header effect={true} />
        {/* </div> */}

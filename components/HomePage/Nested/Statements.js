@@ -110,7 +110,7 @@ const Statements = () => {
             <path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z" />
           </svg>
         </div>
-        <div style={{textAlign:'center', marginTop:20}}> PILLARS OF OUR COMMISSION </div>
+        <div style={{textAlign:'center', marginTop:5}}> PILLARS OF OUR COMMISSION </div>
       </section>
       <section className={styles.textAreaPillar}>
         Truevine Christain Centre has the mandate of God for Total Gospel which is princpally to inculate Kingdom Culture and Virtues, and the consequent benefits which are Rights and Privileges of every citizen of the Kingdom. In this end time, the word of God has been severly compromise such that today, there are praying centres of all sorts with ultimate goal of enriching selves, which as a matter of neccessity compelled many to adulterate the Word of life.

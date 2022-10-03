@@ -20,7 +20,7 @@ const Footer = () => {
               <p>
                 Truevine Christain Centre is a dedicated church of God with the
                 sole mission of gathering the natives of the kingdom for the
-                readiness of the coming of the lord
+                readiness of the coming of the Lord
               </p>
               <button className={styles.knowMore}>Know More</button>
             </div>

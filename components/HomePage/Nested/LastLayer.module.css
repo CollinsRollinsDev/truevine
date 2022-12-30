@@ -1,20 +1,26 @@
 .container{
     /* background-color: pink; */
-    height: 250px;
+    min-height: 250px;
     width: 100%;
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    justify-content: center;
+    align-content: center;
     align-items: center;
-    column-gap: 20px;
+    align-self: center;
+    justify-items: center;
+    /* display: flex;
+    justify-content: space-around;
+    align-items: center; */
     padding: 0 2%;
 }
 .container .subContainer{
-    height: 90%;
+    height: 100%;
     width: 100%;
-    /* background-color: red; */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 .first{
@@ -26,6 +32,7 @@
     align-items: center;
 }
 .firstText{
+    text-align: center;
     font-size: 25px;
     font-family: "Lobster Two", cursive;
     font-weight: 700;

@@ -5,11 +5,19 @@ import styles from './Layer1.module.css';
 import Layer2 from './Layer2';
 
 
-const Layer1 = ({setValue}) => {
+const Layer1 = ({setValue, mobileAppAccountDeletion}) => {
 
     useEffect(() => {
         AOS.init({ duration: 1500 });
       }, []);    
+
+      if(mobileAppAccountDeletion){
+        return (
+            <section data-aos="fade-down" className={styles.container}>
+                <h1>Delete Account</h1>
+            </section>
+        )
+      }
 
     return (
         <section data-aos="fade-down" className={styles.container}>
@@ -28,3 +36,4 @@ const Layer1 = ({setValue}) => {
 }
 
 export default Layer1
+

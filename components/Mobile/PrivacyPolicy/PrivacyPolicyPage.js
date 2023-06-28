@@ -51,7 +51,7 @@ const PrivacyPolicyPage = () => {
             <p className={styles.p}>
                 You can delete your account at any time by visiting the settings of the application and follow the few steps to delete your account You can also contact us at <a style={{
                     color: 'blue'
-                }} href="mailto:collinsrollins07@gmail.com">Support Centre</a> to have your account deleted. Upon deletion of your account, all associated data will be erased from our database.
+                }} href="mailto:collinsrollins07@gmail.com">Support Centre</a> to have your account deleted. Upon deletion of your account, all associated data of yours will be completely erased from our database.
             </p>
 
             <h3 className={styles.h3}>6. Changes to This Privacy Policy</h3>

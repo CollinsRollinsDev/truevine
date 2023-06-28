@@ -47,7 +47,7 @@ const PrivacyPolicyPage = () => {
                 trusted affiliates, and advertisers.
             </p>
 
-            <h3 className={styles.h3} id="delete_account">5. Deleting of Account and Erase of associated data</h3>
+            <h3 className={styles.h3} id="delete_account">5. Deleting of Account and Erasing of associated data</h3>
             <p className={styles.p}>
                 You can delete your account at any time by visiting the settings of the application and follow the few steps to delete your account You can also contact us at <a style={{
                     color: 'blue'

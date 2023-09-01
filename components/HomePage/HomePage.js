@@ -7,11 +7,12 @@ import Statements from "./Nested/Statements";
 import Head from "next/head";
 import LastLayer from "./Nested/LastLayer";
 import Footer from "../Footer/Footer";
+import AboutTheFounder from "./Nested/AboutTheFounder";
 
-const HomePage = ({posts, events}) => {
+const HomePage = ({ posts, events }) => {
   return (
     <section className={styles.container}>
-        {/* <Head>
+      {/* <Head>
           <style>
             @import
             url("https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&display=swap");
@@ -23,8 +24,9 @@ const HomePage = ({posts, events}) => {
       <RecentSermons posts={posts} />
       <Statements />
       <LastLayer />
+      <AboutTheFounder />
       <Footer />
-      
+
     </section>
   );
 };

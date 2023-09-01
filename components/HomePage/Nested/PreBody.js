@@ -48,7 +48,7 @@ const PreBody = () => {
   }, []);
 
   const goToAppLink = () => {
-    router.push('https://drive.google.com/uc?export=download&id=1xid7cbxabUlD4u0UKHA6v7eWTk9UtNC_')
+    router.push('https://play.google.com/store/apps/details?id=com.tvccfamily')
   }
 
 //   const displayImages = 

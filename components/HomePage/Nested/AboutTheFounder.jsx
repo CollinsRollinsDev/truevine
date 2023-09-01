@@ -26,7 +26,7 @@ const AboutTheFounder = () => {
                             />
                         </div>
                         <p>
-                            <b>Pastor Jude Eke</b> is the visionary and founding pastor of Truevine Christian Centre, a place where faith, hope, and love converge to transform lives. With a heart full of compassion and a passion for spreading the Gospel, Pastor Jude has dedicated his life to guiding and nurturing the spiritual growth of individuals and families in our community.
+                            <b>Pastor Jude Eke (PJ)</b> is the visionary and founding pastor of Truevine Christian Centre, a place where faith, hope, and love converge to transform lives. With a heart full of compassion and a passion for spreading the Gospel, Pastor Jude has dedicated his life to guiding and nurturing the spiritual growth of individuals and families in our community.
                         </p>
                         <p>
                             Pastor Jude{`'`}s journey in ministry is marked by unwavering dedication, an unquenchable thirst for knowledge, and an unshakable faith in God{`'`}s grace. His teaching style combines the timeless wisdom of the Scriptures with practical insights for modern living, making the Word of God accessible and relevant to all.

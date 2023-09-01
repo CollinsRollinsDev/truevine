@@ -35,7 +35,7 @@ const AboutTheFounder = () => {
                             Under Pastor Jude{`'`}s leadership, Truevine Christian Centre has become a beacon of light, a place where people from all walks of life gather to worship, learn, and grow in their relationship with God. His commitment to community outreach and social justice initiatives demonstrates his belief that faith should be a catalyst for positive change, both within and beyond the church walls.
                         </p>
                         <p>
-                            Pastor Jude Eke invites you to join the Truevine Christian Centre family, where you{`'`}ll find a warm and welcoming community, a place to discover your purpose, and a spiritual home where you can experience the incredible power of God{`'`}s love. Come, be a part of our journey, as we grow together in faith, hope, and love.
+                            Pastor Jude N. Eke invites you to join the Truevine Christian Centre family, where you{`'`}ll find a warm and welcoming community, a place to discover your purpose, and a spiritual home where you can experience the incredible power of God{`'`}s love. Come, be a part of our journey, as we grow together in faith, hope, and love.
                         </p>
                         {/* <button data-aos="fade-up">Read More</button> */}
                     </div>
